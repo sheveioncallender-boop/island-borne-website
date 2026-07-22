@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="island_borne_header" name="Island Borne Global Header">
+        <header id="top" class="ib-site-header" data-anchor="true">
+            <div class="ib-announcement">AVAILABLE IN STORES ACROSS TRINIDAD</div>
+            <div class="ib-header-main">
+                <button class="ib-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="ib-mobile-navigation">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <a class="ib-brand" href="/" aria-label="Island Borne home">
+                    <img src="/island_borne_website/static/src/img/island_borne_logo.svg" alt="Island Borne"/>
+                </a>
+
+                <nav class="ib-desktop-nav" aria-label="Primary navigation">
+                    <a href="/about">about</a>
+                    <a href="/#products">products</a>
+                    <a href="/#fragrances">fragrances</a>
+                </nav>
+
+                <div class="ib-header-socials" aria-label="Social media links">
+                    <a href="https://www.instagram.com/islandborne/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle class="ib-svg-fill" cx="17.4" cy="6.7" r="1.1"></circle></svg>
+                    </a>
+                    <a href="https://www.threads.net/@islandborne" target="_blank" rel="noopener" aria-label="Threads" class="ib-threads-icon">@</a>
+                    <a href="https://www.tiktok.com/@islandborne" target="_blank" rel="noopener" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.7 3.2c.5 2.8 2.1 4.4 4.8 4.7v3.4c-1.8 0-3.4-.5-4.8-1.5v6.3a5.7 5.7 0 1 1-4.9-5.6v3.5a2.3 2.3 0 1 0 1.5 2.1V3.2h3.4z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <nav id="ib-mobile-navigation" class="ib-mobile-nav" aria-label="Mobile navigation">
+                <a href="/">home</a>
+                <a href="/about">about</a>
+                <a href="/#products">products</a>
+                <a href="/#fragrances">fragrances</a>
+                <div class="ib-mobile-socials">
+                    <a href="https://www.instagram.com/islandborne/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/@islandborne" target="_blank" rel="noopener">TikTok</a>
+                </div>
+            </nav>
+        </header>
+    </template>
+
+    <template id="island_borne_footer" name="Island Borne Global Footer">
+        <footer id="bottom" class="ib-site-footer" data-anchor="true">
+            <picture class="ib-footer-pattern" aria-hidden="true">
+                <source media="(max-width: 767px)" srcset="/island_borne_website/static/src/img/footer_pattern_mobile.webp"/>
+                <img src="/island_borne_website/static/src/img/footer_pattern_desktop.webp" alt="" loading="lazy"/>
+            </picture>
+            <div class="ib-footer-content">
+                <div class="ib-footer-logo-column">
+                    <img class="ib-footer-logo" src="/island_borne_website/static/src/img/island_borne_icon.svg" alt="Island Borne"/>
+                </div>
+
+                <nav class="ib-footer-menu" aria-label="Footer navigation">
+                    <a href="/about">ABOUT</a>
+                    <a href="/#products">PRODUCTS</a>
+                    <a href="/#fragrances">FRAGRANCES</a>
+                    <a href="/#policy">POLICY</a>
+                </nav>
+
+                <div class="ib-footer-address">
+                    <p><strong>Distributed by Immortelle Beauty</strong><br/>
+                    20 Geridot Drive, Diamond Vale,<br/>
+                    Diego Martin.<br/>
+                    <a href="tel:+18687168990">+1 868 716 8990</a><br/>
+                    <a href="mailto:hello@islandborne.com">hello@islandborne.com</a></p>
+                </div>
+
+                <div class="ib-footer-connect">
+                    <form class="ib-newsletter-form" action="#" method="post" novalidate="novalidate">
+                        <label class="visually-hidden" for="ib-newsletter-email">Your email address</label>
+                        <input id="ib-newsletter-email" type="email" name="email" placeholder="Your email address" required="required"/>
+                        <button type="submit" aria-label="Subscribe">&#8594;</button>
+                    </form>
+                    <h2>STAY CONNECTED</h2>
+                    <p>Sign up for our newsletter</p>
+                    <div class="ib-footer-socials">
+                        <a href="https://www.instagram.com/islandborne/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle class="ib-svg-fill" cx="17.4" cy="6.7" r="1.1"></circle></svg>
+                        </a>
+                        <a href="https://www.threads.net/@islandborne" target="_blank" rel="noopener" aria-label="Threads" class="ib-footer-threads">@</a>
+                        <a href="https://www.tiktok.com/@islandborne" target="_blank" rel="noopener" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.7 3.2c.5 2.8 2.1 4.4 4.8 4.7v3.4c-1.8 0-3.4-.5-4.8-1.5v6.3a5.7 5.7 0 1 1-4.9-5.6v3.5a2.3 2.3 0 1 0 1.5 2.1V3.2h3.4z"></path></svg>
+                        </a>
+                    </div>
+                    <div class="ib-newsletter-message" aria-live="polite"></div>
+                </div>
+            </div>
+            <div class="ib-copyright">&#169; 2024 Island Borne. All rights reserved.</div>
+        </footer>
+    </template>
+
+    <template id="island_borne_global_layout" inherit_id="website.layout" name="Island Borne Global Layout" priority="1000">
+        <xpath expr="//head" position="inside">
+            <link rel="stylesheet" type="text/css" href="/island_borne_website/static/src/css/island_borne.css?v=1.1.0"/>
+            <link rel="icon" type="image/png" sizes="256x256" href="/island_borne_website/static/src/img/favicon.png"/>
+            <link rel="shortcut icon" type="image/png" href="/island_borne_website/static/src/img/favicon.png"/>
+            <script type="text/javascript" src="/island_borne_website/static/src/js/island_borne.js?v=1.1.0" defer="defer"></script>
+        </xpath>
+        <xpath expr="//header[@id='top']" position="replace">
+            <t t-call="island_borne_website.island_borne_header"/>
+        </xpath>
+        <xpath expr="//footer[@id='bottom']" position="replace">
+            <t t-call="island_borne_website.island_borne_footer"/>
+        </xpath>
+    </template>
+</odoo>
