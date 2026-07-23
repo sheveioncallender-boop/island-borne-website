@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="island_borne_fragrances_page_template" name="Island Borne Fragrances Page">
+        <t t-call="website.layout">
+            <t t-set="title">Island Borne Fragrances</t>
+            <t t-set="additional_title">Fragrances</t>
+            <div id="wrap" class="oe_structure ib-fragrances-page">
+                <main class="ib-fragrances-main">
+                    <section class="ib-fragrances-hero" aria-labelledby="ib-fragrances-title">
+                        <img class="ib-fragrances-hero-bg" src="/island_borne_website/static/src/img/about_tropical_wide.webp" alt="Tropical leaves" fetchpriority="high"/>
+                        <div class="ib-fragrances-hero-shade"></div>
+                        <div class="ib-fragrances-hero-copy">
+                            <p class="ib-fragrances-kicker">PICK YOUR SCENT</p>
+                            <h1 id="ib-fragrances-title">three moods.<br/>one island.</h1>
+                            <p>Go bright and juicy, soft and yummy or fresh and cool. Each Island Borne fragrance brings its own tropical energy to your everyday routine.</p>
+                            <a class="ib-pill-button ib-fragrances-hero-button" href="#ib-fragrance-worlds">MEET THE MOODS</a>
+                        </div>
+                        <div class="ib-fragrances-hero-orbit" aria-hidden="true">
+                            <div class="ib-fragrances-hero-mood ib-fragrances-hero-cool">
+                                <img src="/island_borne_website/static/src/img/cool_icon.svg" alt=""/>
+                                <span>COOL</span>
+                            </div>
+                            <div class="ib-fragrances-hero-mood ib-fragrances-hero-juicy">
+                                <img src="/island_borne_website/static/src/img/juicy_icon.svg" alt=""/>
+                                <span>JUICY</span>
+                            </div>
+                            <div class="ib-fragrances-hero-mood ib-fragrances-hero-yummy">
+                                <img src="/island_borne_website/static/src/img/yummy_icon.svg" alt=""/>
+                                <span>YUMMY</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="ib-fragrances-intro" aria-labelledby="ib-fragrances-intro-title">
+                        <div class="ib-fragrances-intro-heading">
+                            <p class="ib-fragrances-kicker">FIND YOUR FEEL-GOOD FRAGRANCE</p>
+                            <h2 id="ib-fragrances-intro-title">which mood<br/>feels like you?</h2>
+                        </div>
+                        <div class="ib-fragrances-intro-copy">
+                            <p>Fragrance can change the whole feeling of a routine. Island Borne gives you three distinct scent personalities so you can match your shower and lotion to your mood.</p>
+                            <div class="ib-fragrances-mood-links">
+                                <a href="#cool"><span class="ib-fragrances-dot ib-fragrances-dot-cool"></span>Fresh &amp; breezy</a>
+                                <a href="#juicy"><span class="ib-fragrances-dot ib-fragrances-dot-juicy"></span>Bright &amp; fruity</a>
+                                <a href="#yummy"><span class="ib-fragrances-dot ib-fragrances-dot-yummy"></span>Soft &amp; comforting</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="ib-fragrance-worlds" class="ib-fragrance-worlds" aria-label="Island Borne fragrance moods">
+                        <article id="cool" class="ib-fragrance-world ib-fragrance-world-cool">
+                            <div class="ib-fragrance-world-copy">
+                                <div class="ib-fragrance-world-number">01</div>
+                                <div class="ib-fragrance-world-icon"><img src="/island_borne_website/static/src/img/cool_icon.svg" alt="Cool fragrance icon"/></div>
+                                <p class="ib-fragrances-kicker">TROPICAL FRESH WATER</p>
+                                <h2>keep it<br/>cool</h2>
+                                <p class="ib-fragrance-world-lead">A clean, fresh-water mood with tropical energy. COOL is made for mornings, hot days and anytime you want your routine to feel crisp and refreshed.</p>
+                                <div class="ib-fragrance-notes">
+                                    <span>FRESH</span><span>WATERY</span><span>TROPICAL</span>
+                                </div>
+                                <a class="ib-fragrance-text-link" href="/products#ib-product-range">SHOP THE COOL PAIR <span aria-hidden="true">&#8594;</span></a>
+                            </div>
+                            <div class="ib-fragrance-world-visual">
+                                <span class="ib-fragrance-world-shape" aria-hidden="true"></span>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-shower" src="/island_borne_website/static/src/img/cool_shower.webp" alt="Cool Clean Clean Shower Gel" loading="lazy"/>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-lotion" src="/island_borne_website/static/src/img/cool_lotion.webp" alt="Cool Smooth Smooth Lotion" loading="lazy"/>
+                            </div>
+                        </article>
+
+                        <article id="juicy" class="ib-fragrance-world ib-fragrance-world-juicy">
+                            <div class="ib-fragrance-world-copy">
+                                <div class="ib-fragrance-world-number">02</div>
+                                <div class="ib-fragrance-world-icon"><img src="/island_borne_website/static/src/img/juicy_icon.svg" alt="Juicy fragrance icon"/></div>
+                                <p class="ib-fragrances-kicker">TROPICAL FRUITY</p>
+                                <h2>make it<br/>juicy</h2>
+                                <p class="ib-fragrance-world-lead">A bright tropical-fruit mood that feels playful, sunny and full of life. JUICY is the scent for stepping out, turning up and bringing colour to the everyday.</p>
+                                <div class="ib-fragrance-notes">
+                                    <span>FRUITY</span><span>BRIGHT</span><span>PLAYFUL</span>
+                                </div>
+                                <a class="ib-fragrance-text-link" href="/products#ib-product-range">SHOP THE JUICY PAIR <span aria-hidden="true">&#8594;</span></a>
+                            </div>
+                            <div class="ib-fragrance-world-visual">
+                                <span class="ib-fragrance-world-shape" aria-hidden="true"></span>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-shower" src="/island_borne_website/static/src/img/juicy_shower.webp" alt="Juicy Clean Clean Shower Gel" loading="lazy"/>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-lotion" src="/island_borne_website/static/src/img/juicy_lotion.webp" alt="Juicy Smooth Smooth Lotion" loading="lazy"/>
+                            </div>
+                        </article>
+
+                        <article id="yummy" class="ib-fragrance-world ib-fragrance-world-yummy">
+                            <div class="ib-fragrance-world-copy">
+                                <div class="ib-fragrance-world-number">03</div>
+                                <div class="ib-fragrance-world-icon"><img src="/island_borne_website/static/src/img/yummy_icon.svg" alt="Yummy fragrance icon"/></div>
+                                <p class="ib-fragrances-kicker">VANILLA COCONUT</p>
+                                <h2>make it<br/>yummy</h2>
+                                <p class="ib-fragrance-world-lead">A soft vanilla-coconut mood that feels warm, creamy and comforting. YUMMY is perfect for slow evenings, cosy moments and skin that deserves a little extra love.</p>
+                                <div class="ib-fragrance-notes">
+                                    <span>CREAMY</span><span>SOFT</span><span>COMFORTING</span>
+                                </div>
+                                <a class="ib-fragrance-text-link" href="/products#ib-product-range">SHOP THE YUMMY PAIR <span aria-hidden="true">&#8594;</span></a>
+                            </div>
+                            <div class="ib-fragrance-world-visual">
+                                <span class="ib-fragrance-world-shape" aria-hidden="true"></span>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-shower" src="/island_borne_website/static/src/img/yummy_shower.webp" alt="Yummy Clean Clean Shower Gel" loading="lazy"/>
+                                <img class="ib-fragrance-world-bottle ib-fragrance-world-bottle-lotion" src="/island_borne_website/static/src/img/yummy_lotion.webp" alt="Yummy Smooth Smooth Lotion" loading="lazy"/>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="ib-fragrances-layer" aria-labelledby="ib-fragrances-layer-title">
+                        <div class="ib-fragrances-layer-copy">
+                            <p class="ib-fragrances-kicker">MAKE THE MOOD LAST</p>
+                            <h2 id="ib-fragrances-layer-title">clean it.<br/>smooth it.<br/>layer it.</h2>
+                            <p>Pair Clean, Clean Shower Gel with Smooth, Smooth Lotion in the same fragrance to carry your favourite mood from shower to skin.</p>
+                            <a class="ib-pill-button" href="/products">EXPLORE THE PRODUCTS</a>
+                        </div>
+                        <div class="ib-fragrances-layer-visual" aria-label="Island Borne shower gels and lotions">
+                            <div class="ib-fragrances-layer-line" aria-hidden="true"></div>
+                            <img class="ib-fragrances-layer-bottle ib-fragrances-layer-one" src="/island_borne_website/static/src/img/cool_shower.webp" alt="Cool shower gel" loading="lazy"/>
+                            <img class="ib-fragrances-layer-bottle ib-fragrances-layer-two" src="/island_borne_website/static/src/img/juicy_lotion.webp" alt="Juicy lotion" loading="lazy"/>
+                            <img class="ib-fragrances-layer-bottle ib-fragrances-layer-three" src="/island_borne_website/static/src/img/yummy_shower.webp" alt="Yummy shower gel" loading="lazy"/>
+                        </div>
+                    </section>
+
+                    <section class="ib-fragrances-cta" aria-labelledby="ib-fragrances-cta-title">
+                        <img class="ib-fragrances-cta-bg" src="/island_borne_website/static/src/img/about_tropical_wide.webp" alt="" loading="lazy"/>
+                        <div class="ib-fragrances-cta-shade"></div>
+                        <div class="ib-fragrances-cta-copy">
+                            <p class="ib-fragrances-kicker">FOUND YOUR MOOD?</p>
+                            <h2 id="ib-fragrances-cta-title">find it near you</h2>
+                            <p>Pick your scent, pair your products and find your nearest Island Borne retailer.</p>
+                            <a class="ib-pill-button ib-fragrances-cta-button" href="/#store-finder">FIND A RETAILER</a>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </t>
+    </template>
+
+    <record id="island_borne_fragrances_page" model="website.page">
+        <field name="name">Island Borne Fragrances</field>
+        <field name="url">/fragrances</field>
+        <field name="view_id" ref="island_borne_fragrances_page_template"/>
+        <field name="is_published">True</field>
+        <field name="website_indexed">True</field>
+    </record>
+</odoo>
