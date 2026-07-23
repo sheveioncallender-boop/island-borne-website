@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        v1.3.4 uses a brand-new footer template and a very high-priority layout
+        override. This bypasses website-specific footer copies created when the
+        Odoo visual editor saved the 2026 copyright change.
+    -->
+    <template id="island_borne_footer_v2" name="Island Borne Global Footer v2">
+        <footer id="bottom" class="ib-site-footer ib-site-footer-v2" data-anchor="true">
+            <picture class="ib-footer-pattern" aria-hidden="true">
+                <source media="(max-width: 767px)" srcset="/island_borne_website/static/src/img/footer_pattern_mobile.webp"/>
+                <img src="/island_borne_website/static/src/img/footer_pattern_desktop.webp" alt="" loading="lazy"/>
+            </picture>
+            <div class="ib-footer-content">
+                <div class="ib-footer-logo-column">
+                    <img class="ib-footer-logo" src="/island_borne_website/static/src/img/island_borne_icon.svg" alt="Island Borne"/>
+                </div>
+
+                <nav class="ib-footer-menu" aria-label="Footer navigation">
+                    <a href="/about">ABOUT</a>
+                    <a href="/products">PRODUCTS</a>
+                    <a href="/fragrances">FRAGRANCES</a>
+                    <a href="/#policy">POLICY</a>
+                </nav>
+
+                <div class="ib-footer-address">
+                    <p><strong>Distributed by Immortelle Beauty</strong><br/>
+                    20 Geridot Drive, Diamond Vale,<br/>
+                    Diego Martin.<br/>
+                    <a href="tel:+18687168990">+1 868 716 8990</a><br/>
+                    <a href="mailto:hello@islandborne.com">hello@islandborne.com</a></p>
+                </div>
+
+                <div class="ib-footer-connect">
+                    <form class="ib-newsletter-form" action="#" method="post" novalidate="novalidate">
+                        <label class="visually-hidden" for="ib-newsletter-email-v2">Your email address</label>
+                        <input id="ib-newsletter-email-v2" type="email" name="email" placeholder="Your email address" required="required"/>
+                        <button type="submit" aria-label="Subscribe">&#8594;</button>
+                    </form>
+                    <h2>STAY CONNECTED</h2>
+                    <p>Sign up for our newsletter</p>
+
+                    <!-- One fixed-size visual asset prevents Odoo's editor from
+                         independently enlarging the Instagram and TikTok SVGs. -->
+                    <div class="ib-footer-social-strip-v2" aria-label="Social media links" data-oe-readonly="true"
+                         style="position:relative;display:block;width:126px;height:32px;min-width:126px;min-height:32px;max-width:126px;max-height:32px;overflow:hidden;line-height:0;">
+                        <img src="/island_borne_website/static/src/img/footer_social_group.svg" alt="Instagram, Threads and TikTok"
+                             width="126" height="32"
+                             style="display:block;width:126px;height:32px;min-width:126px;min-height:32px;max-width:126px;max-height:32px;object-fit:contain;margin:0;padding:0;border:0;"/>
+                        <a href="https://www.instagram.com/islandborne/" target="_blank" rel="noopener" aria-label="Instagram"
+                           style="position:absolute;left:0;top:0;width:32px;height:32px;display:block;"></a>
+                        <a href="https://www.threads.net/@islandborne" target="_blank" rel="noopener" aria-label="Threads"
+                           style="position:absolute;left:47px;top:0;width:32px;height:32px;display:block;"></a>
+                        <a href="https://www.tiktok.com/@islandborne" target="_blank" rel="noopener" aria-label="TikTok"
+                           style="position:absolute;right:0;top:0;width:32px;height:32px;display:block;"></a>
+                    </div>
+                    <div class="ib-newsletter-message" aria-live="polite"></div>
+                </div>
+            </div>
+            <div class="ib-copyright">&#169; 2026 Island Borne. All rights reserved.</div>
+        </footer>
+    </template>
+
+    <template id="island_borne_force_footer_v2" inherit_id="website.layout" name="Island Borne Force Footer v2" priority="99999">
+        <xpath expr="//head" position="inside">
+            <style id="ib-footer-v2-lock">
+                #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2,
+                #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 img {
+                    box-sizing: border-box !important;
+                    width: 126px !important;
+                    height: 32px !important;
+                    min-width: 126px !important;
+                    min-height: 32px !important;
+                    max-width: 126px !important;
+                    max-height: 32px !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    border: 0 !important;
+                    transform: none !important;
+                }
+                #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 {
+                    position: relative !important;
+                    display: block !important;
+                    overflow: hidden !important;
+                    line-height: 0 !important;
+                    flex: 0 0 126px !important;
+                }
+                #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 img {
+                    display: block !important;
+                    object-fit: contain !important;
+                }
+                #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 a {
+                    position: absolute !important;
+                    top: 0 !important;
+                    display: block !important;
+                    width: 32px !important;
+                    height: 32px !important;
+                    min-width: 32px !important;
+                    min-height: 32px !important;
+                    max-width: 32px !important;
+                    max-height: 32px !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    background: transparent !important;
+                    border: 0 !important;
+                    font-size: 0 !important;
+                    line-height: 0 !important;
+                }
+                @media (max-width: 767px) {
+                    #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2,
+                    #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 img {
+                        width: 110px !important;
+                        height: 28px !important;
+                        min-width: 110px !important;
+                        min-height: 28px !important;
+                        max-width: 110px !important;
+                        max-height: 28px !important;
+                    }
+                    #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 {
+                        flex-basis: 110px !important;
+                        margin-left: auto !important;
+                        margin-right: auto !important;
+                    }
+                    #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 a {
+                        width: 28px !important;
+                        height: 28px !important;
+                        min-width: 28px !important;
+                        min-height: 28px !important;
+                        max-width: 28px !important;
+                        max-height: 28px !important;
+                    }
+                    #bottom.ib-site-footer-v2 .ib-footer-social-strip-v2 a:nth-of-type(2) {
+                        left: 41px !important;
+                    }
+                }
+            </style>
+        </xpath>
+        <xpath expr="//footer[@id='bottom']" position="replace">
+            <t t-call="island_borne_website.island_borne_footer_v2"/>
+        </xpath>
+    </template>
+</odoo>
