@@ -1,0 +1,4735 @@
+@font-face {
+    font-family: 'IslandAfacad';
+    src: url('/island_borne_website/static/src/fonts/Afacad-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IslandVampiro';
+    src: url('/island_borne_website/static/src/fonts/VampiroOne-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --ib-coral: #f05c40;
+    --ib-coral-deep: #dd4e36;
+    --ib-cream: #fbf2e8;
+    --ib-paper: #fffaf5;
+    --ib-lilac: #d6c3d8;
+    --ib-yummy: #d7bfdd;
+    --ib-cool: #006982;
+    --ib-magenta: #c73765;
+    --ib-white: #ffffff;
+    --ib-black: #080808;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+#wrapwrap {
+    margin: 0;
+    background: var(--ib-cream);
+}
+
+#wrapwrap,
+.ib-homepage,
+.ib-site-header,
+.ib-site-footer {
+    width: 100%;
+    max-width: none;
+}
+
+.ib-homepage,
+.ib-homepage *,
+.ib-site-header,
+.ib-site-header *,
+.ib-site-footer,
+.ib-site-footer * {
+    box-sizing: border-box;
+}
+
+.ib-homepage,
+.ib-site-header,
+.ib-site-footer {
+    font-family: 'IslandAfacad', Arial, sans-serif;
+}
+
+.ib-homepage {
+    overflow: hidden;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+}
+
+.ib-home-main {
+    margin: 0;
+    padding: 0;
+}
+
+.ib-section-anchor {
+    scroll-margin-top: 170px;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Global header */
+.ib-site-header {
+    position: relative;
+    z-index: 1000;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+}
+
+.ib-announcement {
+    min-height: clamp(36px, 3.45vw, 66px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 24px;
+    color: var(--ib-white);
+    background: var(--ib-coral);
+    font-size: clamp(10px, .75vw, 15px);
+    font-weight: 700;
+    letter-spacing: clamp(4px, .52vw, 10px);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ib-header-main {
+    min-height: clamp(92px, 7.65vw, 147px);
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) minmax(430px, 1.25fr) minmax(190px, 1fr);
+    align-items: center;
+    gap: 32px;
+    padding: 0 clamp(46px, 7.4vw, 142px);
+    background: var(--ib-cream);
+}
+
+.ib-brand {
+    display: inline-flex;
+    width: max-content;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ib-brand img {
+    display: block;
+    width: clamp(150px, 11.1vw, 214px);
+    height: auto;
+}
+
+.ib-desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(66px, 7.8vw, 150px);
+}
+
+.ib-desktop-nav a,
+.ib-mobile-nav a,
+.ib-footer-menu a,
+.ib-footer-address a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ib-desktop-nav a {
+    color: var(--ib-coral);
+    font-size: clamp(17px, 1.22vw, 24px);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: lowercase;
+    transition: opacity .2s ease;
+}
+
+.ib-desktop-nav a:hover,
+.ib-header-socials a:hover,
+.ib-footer-menu a:hover,
+.ib-footer-address a:hover,
+.ib-footer-socials a:hover {
+    opacity: .72;
+}
+
+.ib-header-socials {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: clamp(22px, 2vw, 38px);
+}
+
+.ib-header-socials a {
+    width: clamp(25px, 1.8vw, 35px);
+    height: clamp(25px, 1.8vw, 35px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ib-coral);
+    text-decoration: none;
+    transition: opacity .2s ease;
+}
+
+.ib-header-socials svg,
+.ib-footer-socials svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ib-header-socials svg path,
+.ib-footer-socials svg path,
+.ib-svg-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.ib-threads-icon,
+.ib-footer-threads {
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(27px, 2vw, 38px);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ib-menu-toggle,
+.ib-mobile-nav {
+    display: none;
+}
+
+/* Hero */
+.ib-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 46.7% 53.3%;
+    min-height: clamp(700px, 52.15vw, 1002px);
+    background: var(--ib-lilac);
+    overflow: hidden;
+}
+
+.ib-hero-copy {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    background: var(--ib-lilac);
+    padding: clamp(66px, 7vw, 134px) clamp(48px, 5.6vw, 108px) clamp(106px, 9vw, 173px) clamp(62px, 7.7vw, 148px);
+}
+
+.ib-hero-copy::after {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    left: -2%;
+    right: -2%;
+    bottom: -1px;
+    height: clamp(42px, 4vw, 78px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 54%, 8% 61%, 16% 47%, 25% 61%, 34% 43%, 43% 57%, 53% 44%, 63% 62%, 73% 46%, 82% 58%, 91% 46%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.ib-hero-copy-inner {
+    width: 100%;
+    max-width: 650px;
+}
+
+.ib-hero h1 {
+    margin: 0 0 clamp(34px, 2.7vw, 52px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(62px, 5.25vw, 101px);
+    font-weight: 400;
+    letter-spacing: .01em;
+    line-height: .83;
+}
+
+.ib-hero p {
+    max-width: 610px;
+    margin: 0 0 clamp(42px, 3.5vw, 67px);
+    color: var(--ib-coral);
+    font-size: clamp(21px, 1.53vw, 29px);
+    font-weight: 540;
+    line-height: 1.43;
+}
+
+.ib-pill-button {
+    min-width: clamp(230px, 15.4vw, 296px);
+    min-height: clamp(60px, 4.1vw, 79px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 32px;
+    border-radius: 999px;
+    color: var(--ib-white) !important;
+    background: var(--ib-coral);
+    font-size: clamp(18px, 1.18vw, 23px);
+    font-weight: 650;
+    letter-spacing: .055em;
+    line-height: 1;
+    text-decoration: none !important;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.ib-pill-button:hover {
+    background: var(--ib-coral-deep);
+    transform: translateY(-2px);
+}
+
+.ib-hero-picture,
+.ib-hero-picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ib-hero-picture {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: var(--ib-black);
+}
+
+.ib-hero-picture img {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Pick your scent + about */
+.ib-scent-story {
+    position: relative;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    gap: clamp(45px, 5vw, 96px);
+    align-items: start;
+    padding: clamp(85px, 6.8vw, 130px) clamp(65px, 7.1vw, 136px) clamp(110px, 8vw, 154px);
+    background: var(--ib-cream);
+}
+
+.ib-scent-column {
+    min-width: 0;
+}
+
+.ib-script-heading {
+    margin: 0 0 clamp(34px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(45px, 4vw, 77px);
+    font-weight: 400;
+    line-height: .95;
+    text-align: left;
+}
+
+.ib-scent-blob {
+    position: relative;
+    width: min(100%, 700px);
+    aspect-ratio: 1.04 / 1;
+    margin-left: -2%;
+    background: var(--ib-paper);
+    border-radius: 48% 52% 47% 53% / 45% 48% 52% 55%;
+    overflow: hidden;
+}
+
+.ib-scent-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: var(--ib-coral);
+}
+
+.ib-scent-item img {
+    display: block;
+    object-fit: contain;
+}
+
+.ib-scent-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.02;
+}
+
+.ib-scent-copy strong {
+    font-size: clamp(22px, 1.65vw, 32px);
+    font-weight: 800;
+    letter-spacing: .01em;
+}
+
+.ib-scent-copy span {
+    max-width: 210px;
+    margin-top: 4px;
+    font-size: clamp(24px, 1.83vw, 35px);
+    font-weight: 430;
+    line-height: 1.02;
+}
+
+.ib-scent-yummy {
+    left: 10%;
+    top: 29%;
+    color: var(--ib-yummy);
+    gap: 18px;
+}
+
+.ib-scent-yummy .ib-scent-copy {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.ib-scent-yummy img {
+    width: 28%;
+    min-width: 135px;
+}
+
+.ib-scent-cool {
+    right: 7%;
+    top: 14%;
+    gap: 12px;
+}
+
+.ib-scent-cool img {
+    width: 42%;
+    min-width: 175px;
+}
+
+.ib-scent-cool .ib-scent-copy {
+    color: var(--ib-cool);
+}
+
+.ib-scent-juicy {
+    left: 42%;
+    bottom: 11%;
+    gap: 16px;
+}
+
+.ib-scent-juicy img {
+    width: 38%;
+    min-width: 155px;
+}
+
+.ib-scent-juicy .ib-scent-copy {
+    color: var(--ib-coral);
+}
+
+.ib-story-copy {
+    color: var(--ib-coral);
+}
+
+.ib-story-copy h2 {
+    max-width: 850px;
+    margin: 0 0 clamp(38px, 3.1vw, 60px);
+    color: var(--ib-coral);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(38px, 3.05vw, 59px);
+    font-weight: 720;
+    letter-spacing: .006em;
+    line-height: 1.08;
+}
+
+.ib-story-copy p {
+    max-width: 850px;
+    margin: 0 0 clamp(27px, 2.2vw, 42px);
+    color: var(--ib-coral);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 520;
+    line-height: 1.27;
+}
+
+.ib-story-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.ib-story-copy-mobile {
+    display: none;
+}
+
+/* Products */
+.ib-products-section {
+    background: var(--ib-cream);
+}
+
+.ib-products-banner,
+.ib-products-banner img {
+    width: 100%;
+    display: block;
+}
+
+.ib-products-banner img {
+    height: auto;
+}
+
+.ib-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(85px, 8vw, 154px) clamp(60px, 8vw, 154px);
+    padding: clamp(92px, 7vw, 135px) clamp(80px, 8.5vw, 164px) clamp(125px, 9vw, 174px);
+    background: var(--ib-cream);
+}
+
+.ib-product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--ib-black);
+}
+
+.ib-product-card img {
+    width: auto;
+    height: clamp(270px, 21.2vw, 408px);
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto clamp(28px, 2vw, 39px);
+}
+
+.ib-product-card h3,
+.ib-product-card p {
+    font-family: 'IslandAfacad', Arial, sans-serif;
+}
+
+.ib-product-card h3 {
+    margin: 0;
+    color: var(--ib-black);
+    font-size: clamp(23px, 1.55vw, 30px);
+    font-weight: 800;
+    line-height: 1.03;
+}
+
+.ib-product-name {
+    margin: 2px 0 4px;
+    color: var(--ib-black);
+    font-size: clamp(22px, 1.5vw, 29px);
+    font-weight: 760;
+    line-height: 1.03;
+}
+
+.ib-product-type {
+    margin: 0;
+    color: var(--ib-coral);
+    font-size: clamp(20px, 1.4vw, 27px);
+    font-weight: 520;
+    line-height: 1.1;
+}
+
+/* Store finder */
+.ib-store-finder {
+    padding: clamp(55px, 4.8vw, 92px) clamp(65px, 7.2vw, 138px) clamp(72px, 6vw, 116px);
+    color: var(--ib-white);
+    background: var(--ib-coral);
+}
+
+.ib-store-inner {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.ib-store-title-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(36px, 4vw, 77px);
+    margin-bottom: clamp(38px, 3.1vw, 60px);
+}
+
+.ib-store-title-row h2 {
+    flex: 0 0 auto;
+    margin: 0;
+    color: var(--ib-white);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(42px, 4vw, 77px);
+    font-weight: 500;
+    letter-spacing: .13em;
+    line-height: .95;
+}
+
+.ib-store-title-row p {
+    margin: 0;
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(38px, 3.65vw, 70px);
+    font-weight: 400;
+    line-height: .9;
+    white-space: nowrap;
+}
+
+.ib-store-grid {
+    display: grid;
+    grid-template-columns: clamp(320px, 25vw, 480px) minmax(0, 1fr);
+    gap: clamp(28px, 2.8vw, 54px);
+    align-items: stretch;
+}
+
+.ib-store-sidebar {
+    min-width: 0;
+}
+
+.ib-store-search {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(52px, 4vw, 76px);
+    gap: clamp(10px, .8vw, 15px);
+    min-height: clamp(52px, 4vw, 77px);
+    margin-bottom: clamp(19px, 1.4vw, 27px);
+}
+
+.ib-store-search input,
+.ib-store-search button {
+    border: 0;
+    outline: none;
+    background: var(--ib-cream);
+}
+
+.ib-store-search input {
+    width: 100%;
+    min-width: 0;
+    padding: 0 clamp(22px, 1.8vw, 35px);
+    border-radius: 999px;
+    color: var(--ib-coral);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(16px, 1.18vw, 23px);
+    font-weight: 600;
+}
+
+.ib-store-search input::placeholder {
+    color: var(--ib-coral);
+    opacity: 1;
+}
+
+.ib-store-search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--ib-coral);
+    cursor: pointer;
+}
+
+.ib-store-search button svg {
+    width: 38%;
+    height: 38%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+}
+
+.ib-store-list {
+    height: clamp(390px, 30vw, 576px);
+    overflow-y: auto;
+    border: 2px solid rgba(255,255,255,.68);
+    background: var(--ib-cream);
+    scrollbar-color: var(--ib-coral) var(--ib-cream);
+    scrollbar-width: thin;
+}
+
+.ib-store-card {
+    width: 100%;
+    min-height: clamp(128px, 10vw, 192px);
+    display: grid;
+    grid-template-columns: clamp(43px, 3.7vw, 71px) minmax(0, 1fr);
+    gap: clamp(12px, 1vw, 20px);
+    align-items: start;
+    padding: clamp(24px, 2vw, 38px) clamp(20px, 1.7vw, 33px);
+    border: 0;
+    border-bottom: 2px solid rgba(240,92,64,.2);
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    text-align: left;
+    cursor: pointer;
+    transition: color .2s ease, background .2s ease;
+}
+
+.ib-store-card:last-child {
+    border-bottom: 0;
+}
+
+.ib-store-card:hover,
+.ib-store-card.is-active {
+    color: var(--ib-white);
+    background: var(--ib-coral);
+}
+
+.ib-store-card strong {
+    display: block;
+    margin-bottom: 9px;
+    font-size: clamp(19px, 1.45vw, 28px);
+    font-weight: 760;
+    line-height: .95;
+}
+
+.ib-store-card small {
+    display: block;
+    font-size: clamp(13px, 1vw, 19px);
+    font-weight: 520;
+    line-height: 1.15;
+}
+
+.ib-pin-icon {
+    width: clamp(30px, 2.5vw, 48px);
+    display: block;
+    color: currentColor;
+}
+
+.ib-pin-icon svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    fill: currentColor;
+}
+
+.ib-pin-icon circle {
+    fill: var(--ib-cream);
+}
+
+.ib-store-card:not(.is-active):not(:hover) .ib-pin-icon circle {
+    fill: var(--ib-cream);
+}
+
+.ib-map-panel,
+.ib-map-panel iframe {
+    width: 100%;
+    height: clamp(461px, 34vw, 653px);
+    display: block;
+    border: 0;
+}
+
+.ib-map-panel {
+    overflow: hidden;
+    background: #9dd9e6;
+}
+
+/* Global footer — pattern is one responsive image, never a CSS tile */
+.ib-site-footer {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(470px, 30vw, 576px);
+    overflow: hidden;
+    padding: clamp(86px, 6.2vw, 119px) clamp(70px, 7.2vw, 138px) 36px;
+    color: var(--ib-white);
+    background: var(--ib-coral);
+}
+
+.ib-footer-pattern,
+.ib-footer-pattern img {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.ib-footer-pattern img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.ib-footer-content {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: clamp(105px, 8vw, 154px) clamp(180px, 14vw, 269px) minmax(320px, 1fr) minmax(360px, 1.1fr);
+    gap: clamp(34px, 4.4vw, 85px);
+    align-items: start;
+}
+
+.ib-footer-logo {
+    width: clamp(90px, 6.5vw, 125px);
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.ib-footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4px, .4vw, 8px);
+    padding-top: 6px;
+}
+
+.ib-footer-menu a {
+    color: var(--ib-white);
+    font-size: clamp(18px, 1.3vw, 25px);
+    font-weight: 650;
+    line-height: 1.15;
+}
+
+.ib-footer-address p {
+    margin: 6px 0 0;
+    color: var(--ib-white);
+    font-size: clamp(18px, 1.3vw, 25px);
+    font-weight: 520;
+    line-height: 1.14;
+}
+
+.ib-footer-address a {
+    color: var(--ib-white);
+}
+
+.ib-newsletter-form {
+    width: 100%;
+    min-height: clamp(42px, 3.2vw, 62px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(55px, 4.2vw, 81px);
+    gap: 8px;
+    margin-bottom: clamp(24px, 1.8vw, 35px);
+}
+
+.ib-newsletter-form input,
+.ib-newsletter-form button {
+    border: 0;
+    outline: none;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+}
+
+.ib-newsletter-form input {
+    min-width: 0;
+    padding: 0 25px;
+    border-radius: 999px;
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(14px, 1vw, 19px);
+    font-weight: 520;
+}
+
+.ib-newsletter-form button {
+    border-radius: 8px;
+    font-size: clamp(26px, 2vw, 38px);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ib-footer-connect h2 {
+    margin: 0;
+    color: var(--ib-white);
+    font-size: clamp(38px, 3vw, 58px);
+    font-weight: 500;
+    letter-spacing: .06em;
+    line-height: .95;
+}
+
+.ib-footer-connect > p {
+    margin: 10px 0 18px;
+    color: var(--ib-white);
+    font-size: clamp(17px, 1.2vw, 23px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.ib-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 1.6vw, 31px);
+}
+
+.ib-footer-socials a {
+    width: clamp(25px, 1.8vw, 35px);
+    height: clamp(25px, 1.8vw, 35px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ib-white);
+    text-decoration: none;
+}
+
+.ib-footer-threads {
+    font-size: clamp(28px, 2vw, 38px) !important;
+}
+
+.ib-newsletter-message {
+    min-height: 20px;
+    margin-top: 9px;
+    color: var(--ib-white);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.ib-copyright {
+    margin-top: clamp(46px, 4vw, 77px);
+    color: var(--ib-white);
+    font-size: clamp(13px, .88vw, 17px);
+    font-weight: 520;
+    text-align: center;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+    .ib-header-main {
+        grid-template-columns: minmax(170px, 1fr) minmax(360px, 1.3fr) minmax(150px, 1fr);
+        padding-inline: 45px;
+    }
+
+    .ib-desktop-nav {
+        gap: 55px;
+    }
+
+    .ib-scent-story {
+        padding-inline: 60px;
+        gap: 35px;
+    }
+
+    .ib-scent-copy span {
+        font-size: 22px;
+    }
+
+    .ib-store-grid {
+        grid-template-columns: 330px minmax(0, 1fr);
+    }
+
+    .ib-footer-content {
+        grid-template-columns: 90px 145px 1fr 1.15fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ib-section-anchor {
+        scroll-margin-top: 125px;
+    }
+
+    .ib-announcement {
+        min-height: 34px;
+        padding: 6px 14px;
+        font-size: 7px;
+        letter-spacing: 3.6px;
+    }
+
+    .ib-header-main {
+        position: relative;
+        min-height: 122px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 22px;
+    }
+
+    .ib-brand img {
+        width: clamp(145px, 42vw, 182px);
+    }
+
+    .ib-desktop-nav,
+    .ib-header-socials {
+        display: none;
+    }
+
+    .ib-menu-toggle {
+        position: absolute;
+        left: 22px;
+        top: 50%;
+        width: 43px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .ib-menu-toggle span {
+        width: 34px;
+        height: 4px;
+        display: block;
+        border-radius: 999px;
+        background: var(--ib-coral);
+        transition: transform .25s ease, opacity .2s ease;
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-menu-toggle span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-menu-toggle span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+    .ib-mobile-nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 30;
+        display: grid;
+        grid-template-rows: 0fr;
+        padding: 0 28px;
+        overflow: hidden;
+        color: var(--ib-coral);
+        background: var(--ib-cream);
+        box-shadow: 0 12px 25px rgba(93, 45, 35, .08);
+        transition: grid-template-rows .28s ease, padding .28s ease;
+    }
+
+    .ib-mobile-nav > * {
+        min-height: 0;
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-mobile-nav {
+        grid-template-rows: repeat(5, auto);
+        padding-top: 18px;
+        padding-bottom: 24px;
+    }
+
+    .ib-mobile-nav a {
+        display: block;
+        padding: 10px 4px;
+        color: var(--ib-coral);
+        font-size: 20px;
+        font-weight: 650;
+        text-align: center;
+        text-transform: lowercase;
+    }
+
+    .ib-mobile-socials {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 10px;
+        border-top: 1px solid rgba(240, 92, 64, .18);
+        padding-top: 10px;
+    }
+
+    .ib-mobile-socials a {
+        font-size: 14px;
+    }
+
+    .ib-hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        background: var(--ib-lilac);
+    }
+
+    .ib-hero-picture {
+        order: 1;
+        height: auto;
+    }
+
+    .ib-hero-picture img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .ib-hero-copy {
+        order: 2;
+        min-height: 0;
+        display: block;
+        padding: 38px 48px 93px;
+        text-align: left;
+    }
+
+    .ib-hero-copy::after {
+        height: 42px;
+    }
+
+    .ib-hero h1 {
+        margin-bottom: 27px;
+        font-size: clamp(56px, 16vw, 76px);
+        line-height: .8;
+    }
+
+    .ib-hero p {
+        margin-bottom: 38px;
+        font-size: clamp(17px, 4.75vw, 21px);
+        line-height: 1.34;
+    }
+
+    .ib-pill-button {
+        min-width: 218px;
+        min-height: 58px;
+        padding: 13px 25px;
+        font-size: 16px;
+    }
+
+    .ib-scent-story {
+        display: block;
+        padding: 68px 26px 76px;
+    }
+
+    .ib-script-heading {
+        margin-bottom: 42px;
+        font-size: clamp(43px, 12.5vw, 58px);
+        text-align: center;
+    }
+
+    .ib-scent-blob {
+        width: min(100%, 560px);
+        margin: 0 auto;
+        aspect-ratio: 1 / 1.02;
+    }
+
+    .ib-scent-copy strong {
+        font-size: clamp(17px, 4.8vw, 23px);
+    }
+
+    .ib-scent-copy span {
+        max-width: 126px;
+        font-size: clamp(16px, 4.45vw, 22px);
+    }
+
+    .ib-scent-yummy {
+        left: 7%;
+        top: 30%;
+        gap: 8px;
+    }
+
+    .ib-scent-yummy img {
+        min-width: 0;
+        width: 35%;
+    }
+
+    .ib-scent-cool {
+        right: 5%;
+        top: 13%;
+        gap: 6px;
+    }
+
+    .ib-scent-cool img {
+        min-width: 0;
+        width: 47%;
+    }
+
+    .ib-scent-juicy {
+        left: 37%;
+        bottom: 9%;
+        gap: 8px;
+    }
+
+    .ib-scent-juicy img {
+        min-width: 0;
+        width: 42%;
+    }
+
+    .ib-story-copy-desktop {
+        display: none;
+    }
+
+    .ib-products-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .ib-product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 55px 18px;
+        padding: 62px 22px 92px;
+    }
+
+    .ib-product-card {
+        order: initial;
+    }
+
+    .ib-mobile-order-1 { order: 1; }
+    .ib-mobile-order-2 { order: 2; }
+    .ib-mobile-order-3 { order: 3; }
+    .ib-mobile-order-4 { order: 4; }
+    .ib-mobile-order-5 { order: 5; }
+    .ib-mobile-order-6 { order: 6; }
+
+    .ib-product-card img {
+        height: clamp(178px, 50vw, 245px);
+        margin-bottom: 19px;
+    }
+
+    .ib-product-card h3 {
+        font-size: clamp(18px, 5vw, 23px);
+    }
+
+    .ib-product-name {
+        margin: 1px 0 3px;
+        font-size: clamp(16px, 4.5vw, 21px);
+    }
+
+    .ib-product-type {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+
+    .ib-story-copy-mobile {
+        display: block;
+        padding: 68px 34px 90px;
+        background: var(--ib-cream);
+    }
+
+    .ib-story-copy h2 {
+        margin-bottom: 40px;
+        font-size: clamp(29px, 8.1vw, 38px);
+        line-height: 1.08;
+    }
+
+    .ib-story-copy p {
+        margin-bottom: 29px;
+        font-size: clamp(17px, 4.75vw, 21px);
+        line-height: 1.28;
+    }
+
+    .ib-store-finder {
+        padding: 59px 26px 72px;
+    }
+
+    .ib-store-title-row {
+        display: block;
+        margin-bottom: 45px;
+    }
+
+    .ib-store-title-row h2 {
+        font-size: clamp(42px, 12vw, 57px);
+        letter-spacing: .12em;
+        line-height: .92;
+        text-align: center;
+    }
+
+    .ib-store-title-row p {
+        display: none;
+    }
+
+    .ib-store-grid {
+        display: block;
+    }
+
+    .ib-store-search {
+        grid-template-columns: minmax(0, 1fr) 66px;
+        min-height: 64px;
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    .ib-store-search input {
+        padding-inline: 22px;
+        font-size: 18px;
+    }
+
+    .ib-store-list {
+        height: auto;
+        max-height: none;
+        border-width: 2px;
+        overflow: visible;
+    }
+
+    .ib-store-card {
+        min-height: 142px;
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 15px;
+        padding: 31px 22px;
+    }
+
+    .ib-store-card strong {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: .95;
+    }
+
+    .ib-store-card small {
+        font-size: 15px;
+        line-height: 1.18;
+    }
+
+    .ib-pin-icon {
+        width: 39px;
+    }
+
+    .ib-map-panel {
+        display: none;
+    }
+
+    .ib-site-footer {
+        min-height: 905px;
+        padding: 74px 32px 34px;
+    }
+
+    .ib-footer-pattern img {
+        object-position: center top;
+    }
+
+    .ib-footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 31px;
+        text-align: center;
+    }
+
+    .ib-footer-logo-column {
+        order: 1;
+    }
+
+    .ib-footer-menu {
+        order: 2;
+        align-items: center;
+        gap: 7px;
+        padding-top: 0;
+    }
+
+    .ib-footer-address {
+        order: 3;
+    }
+
+    .ib-footer-connect {
+        order: 4;
+        width: min(100%, 410px);
+    }
+
+    .ib-footer-logo {
+        width: 105px;
+    }
+
+    .ib-footer-menu a,
+    .ib-footer-address p {
+        font-size: 19px;
+    }
+
+    .ib-newsletter-form {
+        min-height: 52px;
+        grid-template-columns: minmax(0, 1fr) 62px;
+        margin-bottom: 25px;
+    }
+
+    .ib-footer-connect h2 {
+        font-size: 42px;
+    }
+
+    .ib-footer-connect > p {
+        font-size: 18px;
+    }
+
+    .ib-footer-socials {
+        justify-content: center;
+    }
+
+    .ib-copyright {
+        margin-top: 44px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ib-hero-copy {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
+    .ib-scent-story {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .ib-scent-copy span {
+        font-size: 15px;
+    }
+
+    .ib-product-grid {
+        padding-left: 14px;
+        padding-right: 14px;
+        gap-column: 8px;
+    }
+
+    .ib-product-card img {
+        height: 170px;
+    }
+
+    .ib-store-finder {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Phase 1 visual corrections */
+.ib-scent-item {
+    min-width: 0;
+}
+
+.ib-scent-yummy {
+    width: 48%;
+    left: 6%;
+    top: 31%;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.ib-scent-yummy .ib-scent-copy {
+    width: 48%;
+    flex: 0 0 48%;
+}
+
+.ib-scent-yummy img {
+    width: 44%;
+    min-width: 0;
+    flex: 0 0 44%;
+}
+
+.ib-scent-cool {
+    width: 55%;
+    right: 4%;
+    top: 11%;
+    gap: 10px;
+}
+
+.ib-scent-cool img {
+    width: 51%;
+    min-width: 0;
+    flex: 0 0 51%;
+}
+
+.ib-scent-cool .ib-scent-copy {
+    width: 45%;
+    flex: 0 0 45%;
+}
+
+.ib-scent-juicy {
+    width: 53%;
+    left: 37%;
+    bottom: 8%;
+    gap: 12px;
+}
+
+.ib-scent-juicy img {
+    width: 43%;
+    min-width: 0;
+    flex: 0 0 43%;
+}
+
+.ib-scent-juicy .ib-scent-copy {
+    width: 52%;
+    flex: 0 0 52%;
+}
+
+.ib-scent-copy span {
+    max-width: none;
+}
+
+.ib-store-title-row p {
+    min-width: 0;
+    flex: 1 1 auto;
+    font-size: clamp(34px, 3.05vw, 58px);
+}
+
+.ib-footer-pattern {
+    z-index: 0;
+}
+
+.ib-footer-content,
+.ib-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .ib-mobile-nav {
+        display: block;
+        max-height: 0;
+        padding: 0 28px;
+        opacity: 0;
+        pointer-events: none;
+        overflow: hidden;
+        transition: max-height .3s ease, padding .3s ease, opacity .2s ease;
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-mobile-nav {
+        max-height: 470px;
+        padding-top: 18px;
+        padding-bottom: 24px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .ib-scent-yummy {
+        width: 50%;
+        left: 4%;
+        top: 31%;
+        gap: 5px;
+    }
+
+    .ib-scent-cool {
+        width: 57%;
+        right: 3%;
+        top: 12%;
+        gap: 4px;
+    }
+
+    .ib-scent-juicy {
+        width: 55%;
+        left: 35%;
+        bottom: 9%;
+        gap: 5px;
+    }
+
+    .ib-scent-copy strong {
+        font-size: clamp(14px, 4vw, 19px);
+    }
+
+    .ib-scent-copy span {
+        font-size: clamp(13px, 3.7vw, 18px);
+        line-height: 1.02;
+    }
+}
+
+.ib-footer-pattern img {
+    z-index: 0;
+}
+
+@media (max-width: 767px) {
+    .ib-announcement {
+        min-height: 32px;
+        padding: 7px 14px;
+        font-size: 9px;
+        letter-spacing: 4px;
+        line-height: 1.15;
+    }
+
+    .ib-header-main {
+        min-height: 94px;
+        padding: 12px 18px;
+    }
+
+    .ib-brand img {
+        width: clamp(122px, 35vw, 150px);
+    }
+
+    .ib-menu-toggle {
+        left: 18px;
+        width: 36px;
+        gap: 5px;
+    }
+
+    .ib-menu-toggle span {
+        width: 29px;
+        height: 3px;
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-menu-toggle span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .ib-site-header.is-mobile-menu-open .ib-menu-toggle span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .ib-hero-copy {
+        padding: 28px 36px 70px;
+    }
+
+    .ib-hero h1 {
+        margin-bottom: 20px;
+        font-size: clamp(49px, 14vw, 65px);
+    }
+
+    .ib-hero p {
+        margin-bottom: 28px;
+        font-size: clamp(15px, 4.1vw, 18px);
+        line-height: 1.3;
+    }
+
+    .ib-pill-button {
+        min-width: 185px;
+        min-height: 48px;
+        font-size: 13px;
+    }
+
+    .ib-scent-story {
+        padding: 47px 20px 55px;
+    }
+
+    .ib-script-heading {
+        margin-bottom: 28px;
+        font-size: clamp(38px, 10.8vw, 49px);
+    }
+
+    .ib-scent-blob {
+        width: min(100%, 350px);
+    }
+
+    .ib-product-grid {
+        gap: 35px 12px;
+        padding: 45px 16px 66px;
+    }
+
+    .ib-product-card img {
+        height: clamp(145px, 42vw, 190px);
+        margin-bottom: 14px;
+    }
+
+    .ib-product-card h3 {
+        font-size: clamp(15px, 4.2vw, 19px);
+    }
+
+    .ib-product-name {
+        font-size: clamp(14px, 3.8vw, 17px);
+    }
+
+    .ib-product-type {
+        font-size: clamp(12px, 3.4vw, 15px);
+    }
+
+    .ib-story-copy-mobile {
+        padding: 52px 28px 65px;
+    }
+
+    .ib-story-copy h2 {
+        margin-bottom: 27px;
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .ib-story-copy p {
+        margin-bottom: 20px;
+        font-size: clamp(14px, 4vw, 17px);
+        line-height: 1.25;
+    }
+
+    .ib-store-finder {
+        padding: 45px 20px 55px;
+    }
+
+    .ib-store-title-row {
+        margin-bottom: 31px;
+    }
+
+    .ib-store-title-row h2 {
+        font-size: clamp(36px, 10.2vw, 46px);
+    }
+
+    .ib-store-search {
+        grid-template-columns: minmax(0, 1fr) 54px;
+        min-height: 52px;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .ib-store-search input {
+        font-size: 15px;
+    }
+
+    .ib-store-card {
+        min-height: 112px;
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 11px;
+        padding: 23px 17px;
+    }
+
+    .ib-store-card strong {
+        margin-bottom: 7px;
+        font-size: 18px;
+    }
+
+    .ib-store-card small {
+        font-size: 12px;
+    }
+
+    .ib-pin-icon {
+        width: 31px;
+    }
+
+    .ib-site-footer {
+        min-height: 710px;
+        padding: 56px 26px 26px;
+    }
+
+    .ib-footer-content {
+        gap: 22px;
+    }
+
+    .ib-footer-logo {
+        width: 82px;
+    }
+
+    .ib-footer-menu {
+        gap: 4px;
+    }
+
+    .ib-footer-menu a,
+    .ib-footer-address p {
+        font-size: 16px;
+    }
+
+    .ib-newsletter-form {
+        min-height: 46px;
+        grid-template-columns: minmax(0, 1fr) 54px;
+        margin-bottom: 18px;
+    }
+
+    .ib-footer-connect h2 {
+        font-size: 35px;
+    }
+
+    .ib-footer-connect > p {
+        margin: 7px 0 13px;
+        font-size: 15px;
+    }
+
+    .ib-copyright {
+        margin-top: 28px;
+        font-size: 12px;
+    }
+}
+
+/* v1.0.2 footer seam cleanup */
+.ib-site-footer,
+.ib-footer-pattern,
+.ib-footer-pattern img {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* v1.0.3: keep the desktop JUICY description fully inside its scent item */
+@media (min-width: 768px) {
+    .ib-scent-juicy {
+        width: 60%;
+        left: 36%;
+    }
+
+    .ib-scent-juicy img {
+        width: 39%;
+        flex-basis: 39%;
+    }
+
+    .ib-scent-juicy .ib-scent-copy {
+        width: 55%;
+        flex-basis: 55%;
+        padding-right: 8px;
+    }
+
+    .ib-scent-juicy .ib-scent-copy span {
+        white-space: nowrap;
+    }
+}
+
+/* v1.0.5 desktop refinements: keep JUICY copy visible and tighten footer height */
+@media (min-width: 768px) {
+    /* The scent artwork is decorative; its text must never be clipped by the blob edge. */
+    .ib-scent-blob {
+        overflow: visible;
+    }
+
+    .ib-scent-juicy {
+        width: 62%;
+        left: 32%;
+        gap: 8px;
+    }
+
+    .ib-scent-juicy img {
+        width: 37%;
+        flex: 0 0 37%;
+    }
+
+    .ib-scent-juicy .ib-scent-copy {
+        width: auto;
+        min-width: 0;
+        flex: 1 1 auto;
+        padding-right: 0;
+        overflow: visible;
+    }
+
+    .ib-scent-juicy .ib-scent-copy span {
+        display: block;
+        width: max-content;
+        max-width: none;
+        white-space: nowrap;
+        overflow: visible;
+    }
+
+    /* Match the shallower footer proportion in the supplied desktop artwork. */
+    .ib-site-footer {
+        min-height: clamp(430px, 24vw, 470px);
+        display: flex;
+        flex-direction: column;
+        padding-top: clamp(54px, 3.7vw, 71px);
+        padding-bottom: 22px;
+    }
+
+    .ib-copyright {
+        margin-top: auto;
+        padding-top: clamp(24px, 1.8vw, 35px);
+    }
+}
+
+/* v1.0.6 wide-desktop footer: match the supplied artwork's centered four-column composition */
+@media (min-width: 1500px) {
+    .ib-site-footer {
+        min-height: clamp(430px, 23.35vw, 448px);
+        display: block;
+        padding: clamp(100px, 6.65vw, 128px) 0 30px;
+    }
+
+    .ib-footer-content {
+        width: calc(100% - 80px);
+        max-width: 1630px;
+        margin: 0 auto;
+        grid-template-columns: 130px 290px 520px minmax(0, 1fr);
+        column-gap: 110px;
+        row-gap: 0;
+        align-items: start;
+    }
+
+    .ib-footer-logo-column {
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .ib-footer-logo {
+        width: 112px;
+    }
+
+    .ib-footer-menu,
+    .ib-footer-address {
+        position: relative;
+        min-height: 190px;
+    }
+
+    .ib-footer-menu {
+        gap: 6px;
+        padding-top: 17px;
+    }
+
+    .ib-footer-address {
+        padding-top: 38px;
+    }
+
+    .ib-footer-menu::after,
+    .ib-footer-address::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 1px;
+        height: 190px;
+        background: rgba(255, 255, 255, .78);
+        pointer-events: none;
+    }
+
+    .ib-footer-connect {
+        padding-top: 14px;
+    }
+
+    .ib-newsletter-form {
+        max-width: 410px;
+        min-height: 42px;
+        grid-template-columns: minmax(0, 1fr) 62px;
+        margin-bottom: 22px;
+    }
+
+    .ib-footer-connect h2 {
+        font-size: clamp(42px, 2.65vw, 51px);
+        letter-spacing: .045em;
+    }
+
+    .ib-footer-connect > p {
+        margin: 8px 0 15px;
+    }
+
+    .ib-copyright {
+        margin-top: 48px;
+        padding-top: 0;
+    }
+}
+
+
+/* v1.0.7 wide-desktop footer vertical alignment
+   Align the brand icon, footer links and distributor details with the
+   STAY CONNECTED content block, while preserving the newsletter position. */
+@media (min-width: 1500px) {
+    .ib-footer-logo-column,
+    .ib-footer-menu,
+    .ib-footer-address {
+        transform: translateY(84px);
+    }
+}
+
+
+/* v1.0.8 mobile store finder map
+   The earlier mobile mock intentionally hid the map. Keep the working desktop
+   map and show it directly below the store cards on phones and small tablets. */
+@media (max-width: 767px) {
+    .ib-map-panel {
+        display: block;
+        width: 100%;
+        height: clamp(270px, 82vw, 390px);
+        margin-top: 24px;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, .72);
+        background: #9dd9e6;
+    }
+
+    .ib-map-panel iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        border: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .ib-map-panel {
+        height: clamp(250px, 80vw, 330px);
+        margin-top: 20px;
+    }
+}
+
+/* ================================================================
+   Phase 2 — About page
+   A brand-led interior page built from the supplied Island Borne
+   palette, typography, product artwork and tropical source image.
+   ================================================================ */
+.ib-about-page,
+.ib-about-page * {
+    box-sizing: border-box;
+}
+
+.ib-about-page {
+    overflow: hidden;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+}
+
+.ib-about-main {
+    margin: 0;
+    padding: 0;
+}
+
+.ib-about-kicker {
+    margin: 0 0 16px;
+    color: inherit;
+    font-family: 'IslandAfacad', Arial, sans-serif;
+    font-size: clamp(13px, .95vw, 18px);
+    font-weight: 800;
+    letter-spacing: .22em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* About hero */
+.ib-about-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 46.7% 53.3%;
+    min-height: clamp(680px, 51vw, 980px);
+    background: var(--ib-lilac);
+    overflow: hidden;
+}
+
+.ib-about-hero::after {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    left: -1%;
+    right: -1%;
+    bottom: -1px;
+    height: clamp(42px, 4vw, 76px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 55%, 8% 63%, 17% 48%, 26% 61%, 35% 46%, 44% 58%, 54% 44%, 64% 62%, 74% 47%, 83% 59%, 92% 46%, 100% 55%, 100% 100%, 0 100%);
+}
+
+.ib-about-hero-copy {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(70px, 7vw, 134px) clamp(48px, 5.8vw, 112px) clamp(110px, 9vw, 173px) clamp(62px, 7.7vw, 148px);
+    background: var(--ib-lilac);
+}
+
+.ib-about-hero-copy h1 {
+    margin: 0 0 clamp(32px, 2.8vw, 54px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(68px, 6vw, 116px);
+    font-weight: 400;
+    letter-spacing: .01em;
+    line-height: .82;
+}
+
+.ib-about-hero-lead {
+    max-width: 620px;
+    margin: 0 0 clamp(38px, 3.5vw, 67px);
+    color: var(--ib-coral);
+    font-size: clamp(21px, 1.55vw, 30px);
+    font-weight: 520;
+    line-height: 1.38;
+}
+
+.ib-about-hero-visual {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: #15250f;
+}
+
+.ib-about-leaf-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 52% 48%;
+    filter: saturate(1.04) contrast(1.02);
+}
+
+.ib-about-hero-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(115deg, rgba(0,0,0,.05), rgba(0,0,0,.28));
+}
+
+.ib-about-bottle-cluster {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 5%;
+    width: 72%;
+    height: 82%;
+    transform: translateX(-50%);
+}
+
+.ib-about-bottle {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    height: 67%;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 20px rgba(0, 0, 0, .22));
+}
+
+.ib-about-bottle-cool {
+    z-index: 3;
+    left: 33%;
+    height: 80%;
+    transform: rotate(-4deg);
+}
+
+.ib-about-bottle-juicy {
+    z-index: 2;
+    left: 8%;
+    height: 69%;
+    transform: rotate(-9deg) translateY(3%);
+}
+
+.ib-about-bottle-yummy {
+    z-index: 1;
+    right: 3%;
+    height: 68%;
+    transform: rotate(8deg) translateY(4%);
+}
+
+/* Brand belief */
+.ib-about-belief {
+    display: grid;
+    grid-template-columns: minmax(380px, .82fr) minmax(0, 1.18fr);
+    gap: clamp(70px, 8vw, 154px);
+    align-items: center;
+    padding: clamp(105px, 8vw, 154px) clamp(70px, 8.2vw, 158px) clamp(115px, 8.5vw, 164px);
+    background: var(--ib-cream);
+}
+
+.ib-about-belief-art {
+    position: relative;
+    width: min(100%, 610px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: var(--ib-coral);
+    background: var(--ib-paper);
+    overflow: hidden;
+}
+
+.ib-about-belief-art::before,
+.ib-about-belief-art::after {
+    content: '';
+    position: absolute;
+    width: 42%;
+    aspect-ratio: 1;
+    border-radius: 46% 54% 58% 42% / 52% 43% 57% 48%;
+    background: var(--ib-lilac);
+    opacity: .8;
+}
+
+.ib-about-belief-art::before {
+    left: -13%;
+    top: 5%;
+    transform: rotate(22deg);
+}
+
+.ib-about-belief-art::after {
+    right: -14%;
+    bottom: 1%;
+    background: var(--ib-coral);
+    opacity: .12;
+    transform: rotate(-24deg);
+}
+
+.ib-about-belief-art img {
+    position: relative;
+    z-index: 2;
+    width: 25%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 22px;
+}
+
+.ib-about-belief-art > p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(52px, 4.5vw, 86px);
+    font-weight: 400;
+    line-height: .78;
+    text-align: center;
+}
+
+.ib-about-orbit {
+    position: absolute;
+    z-index: 1;
+    border: 2px solid rgba(240, 92, 64, .22);
+    border-radius: 50%;
+}
+
+.ib-about-orbit-one {
+    inset: 9%;
+}
+
+.ib-about-orbit-two {
+    inset: 20%;
+    border-color: rgba(0, 105, 130, .18);
+}
+
+.ib-about-belief-copy {
+    max-width: 850px;
+}
+
+.ib-about-belief-copy h2 {
+    margin: 0 0 clamp(34px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-size: clamp(44px, 3.8vw, 73px);
+    font-weight: 750;
+    letter-spacing: .005em;
+    line-height: 1.02;
+}
+
+.ib-about-belief-copy > p:not(.ib-about-kicker) {
+    margin: 0 0 clamp(24px, 2vw, 38px);
+    color: var(--ib-coral);
+    font-size: clamp(21px, 1.48vw, 28px);
+    font-weight: 510;
+    line-height: 1.33;
+}
+
+.ib-about-belief-copy > p:last-child {
+    margin-bottom: 0;
+}
+
+/* Values */
+.ib-about-values {
+    position: relative;
+    padding: clamp(105px, 8vw, 154px) clamp(70px, 7.5vw, 144px) clamp(125px, 9vw, 173px);
+    color: var(--ib-coral);
+    background: var(--ib-lilac);
+}
+
+.ib-about-values::before,
+.ib-about-values::after {
+    content: '';
+    position: absolute;
+    left: -1%;
+    right: -1%;
+    height: clamp(40px, 3.5vw, 67px);
+    background: var(--ib-cream);
+}
+
+.ib-about-values::before {
+    top: -1px;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 91% 59%, 82% 43%, 73% 60%, 64% 44%, 55% 58%, 46% 42%, 37% 61%, 28% 45%, 19% 59%, 10% 43%, 0 55%);
+}
+
+.ib-about-values::after {
+    bottom: -1px;
+    clip-path: polygon(0 54%, 10% 44%, 19% 59%, 28% 43%, 37% 61%, 46% 44%, 55% 58%, 64% 42%, 73% 59%, 82% 43%, 91% 60%, 100% 46%, 100% 100%, 0 100%);
+}
+
+.ib-about-values-heading {
+    max-width: 1480px;
+    margin: 0 auto clamp(55px, 5vw, 96px);
+    text-align: center;
+}
+
+.ib-about-values-heading h2 {
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(58px, 5vw, 96px);
+    font-weight: 400;
+    line-height: .9;
+}
+
+.ib-about-values-grid {
+    width: 100%;
+    max-width: 1640px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(24px, 2.2vw, 42px);
+    margin: 0 auto;
+}
+
+.ib-about-value-card {
+    position: relative;
+    min-height: clamp(380px, 28vw, 538px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: clamp(45px, 3.5vw, 67px) clamp(25px, 2.3vw, 44px) clamp(35px, 3vw, 58px);
+    border-radius: 48% 52% 47% 53% / 18% 18% 14% 14%;
+    text-align: center;
+    background: var(--ib-paper);
+    overflow: hidden;
+}
+
+.ib-about-value-card::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: -21%;
+    height: 35%;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: .08;
+}
+
+.ib-about-value-icon {
+    width: clamp(105px, 8.5vw, 164px);
+    height: clamp(105px, 8.5vw, 164px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(24px, 2vw, 38px);
+}
+
+.ib-about-value-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.ib-about-value-card h3 {
+    margin: 0 0 17px;
+    color: inherit;
+    font-size: clamp(22px, 1.55vw, 30px);
+    font-weight: 800;
+    line-height: 1.03;
+}
+
+.ib-about-value-card p {
+    position: relative;
+    z-index: 2;
+    max-width: 290px;
+    margin: 0;
+    color: inherit;
+    font-size: clamp(18px, 1.25vw, 24px);
+    font-weight: 500;
+    line-height: 1.28;
+}
+
+.ib-about-value-cool {
+    color: var(--ib-cool);
+}
+
+.ib-about-value-juicy {
+    color: var(--ib-coral);
+}
+
+.ib-about-value-yummy {
+    color: #aa78b5;
+}
+
+.ib-about-value-earth {
+    color: var(--ib-coral);
+    background: var(--ib-paper);
+}
+
+.ib-about-value-mark {
+    width: clamp(105px, 8.5vw, 164px);
+    height: clamp(105px, 8.5vw, 164px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(24px, 2vw, 38px);
+    border: 4px solid currentColor;
+    border-radius: 50%;
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(78px, 6vw, 116px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Routine */
+.ib-about-routine {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(520px, 1.05fr);
+    gap: clamp(60px, 6vw, 115px);
+    align-items: center;
+    padding: clamp(110px, 8.5vw, 164px) clamp(70px, 8vw, 154px) clamp(120px, 9vw, 173px);
+    background: var(--ib-cream);
+}
+
+.ib-about-routine-copy {
+    max-width: 780px;
+}
+
+.ib-about-routine-copy h2 {
+    margin: 0 0 clamp(35px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(58px, 5vw, 96px);
+    font-weight: 400;
+    line-height: .84;
+}
+
+.ib-about-routine-copy > p:not(.ib-about-kicker) {
+    max-width: 670px;
+    margin: 0 0 clamp(35px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-size: clamp(21px, 1.48vw, 28px);
+    font-weight: 510;
+    line-height: 1.35;
+}
+
+.ib-about-routine-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(28px, 2.7vw, 52px);
+    flex-wrap: wrap;
+}
+
+.ib-about-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ib-coral) !important;
+    font-size: clamp(17px, 1.15vw, 22px);
+    font-weight: 750;
+    letter-spacing: .06em;
+    text-decoration: none !important;
+}
+
+.ib-about-text-link span {
+    font-size: 1.5em;
+    line-height: 1;
+    transition: transform .2s ease;
+}
+
+.ib-about-text-link:hover span {
+    transform: translateX(5px);
+}
+
+.ib-about-routine-products {
+    position: relative;
+    min-height: clamp(570px, 42vw, 806px);
+    border-radius: 48% 52% 46% 54% / 42% 47% 53% 58%;
+    background: var(--ib-lilac);
+    overflow: hidden;
+}
+
+.ib-about-routine-products::before,
+.ib-about-routine-products::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ib-about-routine-products::before {
+    width: 66%;
+    aspect-ratio: 1;
+    left: -25%;
+    top: -24%;
+    background: rgba(255, 250, 245, .6);
+}
+
+.ib-about-routine-products::after {
+    width: 54%;
+    aspect-ratio: 1;
+    right: -21%;
+    bottom: -20%;
+    background: rgba(240, 92, 64, .14);
+}
+
+.ib-about-routine-product {
+    position: absolute;
+    z-index: 2;
+    bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--ib-coral);
+}
+
+.ib-about-routine-product img {
+    width: auto;
+    height: clamp(360px, 28vw, 538px);
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 26px 18px rgba(76, 44, 37, .17));
+}
+
+.ib-about-routine-product span {
+    margin-top: 13px;
+    font-size: clamp(18px, 1.2vw, 23px);
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.ib-about-routine-product-one {
+    left: 5%;
+    transform: rotate(-4deg) scale(.84);
+}
+
+.ib-about-routine-product-two {
+    z-index: 3;
+    left: 37%;
+    transform: scale(1.03);
+}
+
+.ib-about-routine-product-three {
+    right: 3%;
+    transform: rotate(4deg) scale(.84);
+}
+
+/* Final CTA */
+.ib-about-cta {
+    position: relative;
+    min-height: clamp(610px, 43vw, 826px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(95px, 8vw, 154px) 30px;
+    background-image: url('/island_borne_website/static/src/img/about_tropical_wide.webp');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.ib-about-cta::before {
+    content: '';
+    position: absolute;
+    z-index: 3;
+    left: -1%;
+    right: -1%;
+    top: -1px;
+    height: clamp(45px, 4vw, 77px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 0, 100% 0, 100% 48%, 91% 61%, 82% 45%, 73% 59%, 64% 43%, 55% 60%, 46% 44%, 37% 58%, 28% 42%, 19% 61%, 10% 45%, 0 57%);
+}
+
+.ib-about-cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(12, 31, 12, .72), rgba(12, 31, 12, .45));
+}
+
+.ib-about-cta-content {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 950px);
+    padding: clamp(54px, 5vw, 96px) clamp(42px, 5vw, 96px);
+    border-radius: 47% 53% 50% 50% / 16% 17% 14% 14%;
+    color: var(--ib-coral);
+    background: rgba(251, 242, 232, .96);
+    text-align: center;
+}
+
+.ib-about-cta-content h2 {
+    margin: 0 0 clamp(26px, 2.5vw, 48px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(62px, 5.5vw, 106px);
+    font-weight: 400;
+    line-height: .8;
+}
+
+.ib-about-cta-content > p:not(.ib-about-kicker) {
+    max-width: 680px;
+    margin: 0 auto clamp(32px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-size: clamp(20px, 1.42vw, 27px);
+    font-weight: 520;
+    line-height: 1.32;
+}
+
+.ib-about-cta-button {
+    min-width: clamp(235px, 16vw, 307px);
+}
+
+/* Tablet */
+@media (max-width: 1100px) and (min-width: 768px) {
+    .ib-about-hero-copy {
+        padding-left: 58px;
+        padding-right: 45px;
+    }
+
+    .ib-about-belief,
+    .ib-about-routine {
+        padding-inline: 58px;
+        gap: 45px;
+    }
+
+    .ib-about-belief {
+        grid-template-columns: minmax(320px, .9fr) minmax(0, 1.1fr);
+    }
+
+    .ib-about-values {
+        padding-inline: 45px;
+    }
+
+    .ib-about-values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ib-about-value-card {
+        min-height: 430px;
+    }
+
+    .ib-about-routine {
+        grid-template-columns: minmax(0, .9fr) minmax(410px, 1.1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .ib-about-kicker {
+        margin-bottom: 11px;
+        font-size: 11px;
+        letter-spacing: .2em;
+    }
+
+    .ib-about-hero {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .ib-about-hero::after {
+        height: 38px;
+    }
+
+    .ib-about-hero-visual {
+        order: 1;
+        height: min(118vw, 610px);
+    }
+
+    .ib-about-leaf-image {
+        object-position: 53% 42%;
+    }
+
+    .ib-about-bottle-cluster {
+        width: 91%;
+        height: 82%;
+        bottom: 4%;
+    }
+
+    .ib-about-bottle-cool {
+        left: 32%;
+        height: 79%;
+    }
+
+    .ib-about-bottle-juicy {
+        left: 2%;
+        height: 66%;
+    }
+
+    .ib-about-bottle-yummy {
+        right: -2%;
+        height: 66%;
+    }
+
+    .ib-about-hero-copy {
+        order: 2;
+        display: block;
+        padding: 48px 34px 85px;
+    }
+
+    .ib-about-hero-copy h1 {
+        margin-bottom: 25px;
+        font-size: clamp(58px, 17vw, 80px);
+        line-height: .8;
+    }
+
+    .ib-about-hero-lead {
+        margin-bottom: 32px;
+        font-size: clamp(17px, 4.75vw, 21px);
+        line-height: 1.32;
+    }
+
+    .ib-about-belief {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 72px 27px 86px;
+    }
+
+    .ib-about-belief-art {
+        width: min(100%, 430px);
+    }
+
+    .ib-about-belief-art img {
+        width: 23%;
+        margin-bottom: 16px;
+    }
+
+    .ib-about-belief-art > p {
+        font-size: clamp(50px, 15vw, 70px);
+    }
+
+    .ib-about-belief-copy h2 {
+        margin-bottom: 28px;
+        font-size: clamp(31px, 8.8vw, 42px);
+    }
+
+    .ib-about-belief-copy > p:not(.ib-about-kicker) {
+        margin-bottom: 21px;
+        font-size: clamp(17px, 4.6vw, 20px);
+        line-height: 1.3;
+    }
+
+    .ib-about-values {
+        padding: 88px 22px 100px;
+    }
+
+    .ib-about-values::before,
+    .ib-about-values::after {
+        height: 34px;
+    }
+
+    .ib-about-values-heading {
+        margin-bottom: 42px;
+    }
+
+    .ib-about-values-heading h2 {
+        font-size: clamp(50px, 14vw, 68px);
+    }
+
+    .ib-about-values-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .ib-about-value-card {
+        width: min(100%, 430px);
+        min-height: 0;
+        margin: 0 auto;
+        padding: 39px 27px 43px;
+        border-radius: 44% 56% 48% 52% / 12% 13% 10% 10%;
+    }
+
+    .ib-about-value-icon,
+    .ib-about-value-mark {
+        width: 104px;
+        height: 104px;
+        margin-bottom: 22px;
+    }
+
+    .ib-about-value-mark {
+        font-size: 74px;
+    }
+
+    .ib-about-value-card h3 {
+        font-size: 23px;
+    }
+
+    .ib-about-value-card p {
+        font-size: 18px;
+    }
+
+    .ib-about-routine {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 77px 27px 90px;
+    }
+
+    .ib-about-routine-copy h2 {
+        margin-bottom: 27px;
+        font-size: clamp(50px, 14.5vw, 70px);
+    }
+
+    .ib-about-routine-copy > p:not(.ib-about-kicker) {
+        margin-bottom: 32px;
+        font-size: clamp(17px, 4.6vw, 20px);
+        line-height: 1.3;
+    }
+
+    .ib-about-routine-actions {
+        gap: 22px;
+    }
+
+    .ib-about-text-link {
+        font-size: 15px;
+    }
+
+    .ib-about-routine-products {
+        width: min(100%, 520px);
+        min-height: 112vw;
+        max-height: 610px;
+        order: -1;
+    }
+
+    .ib-about-routine-product img {
+        height: min(72vw, 390px);
+    }
+
+    .ib-about-routine-product-one {
+        left: -2%;
+    }
+
+    .ib-about-routine-product-two {
+        left: 32%;
+    }
+
+    .ib-about-routine-product-three {
+        right: -5%;
+    }
+
+    .ib-about-routine-product span {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .ib-about-cta {
+        min-height: 680px;
+        padding: 92px 20px 78px;
+        background-position: 53% center;
+    }
+
+    .ib-about-cta::before {
+        height: 38px;
+    }
+
+    .ib-about-cta-content {
+        padding: 48px 26px 54px;
+        border-radius: 42% 58% 48% 52% / 8% 9% 7% 7%;
+    }
+
+    .ib-about-cta-content h2 {
+        margin-bottom: 25px;
+        font-size: clamp(56px, 16vw, 76px);
+    }
+
+    .ib-about-cta-content > p:not(.ib-about-kicker) {
+        margin-bottom: 31px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ib-about-hero-copy,
+    .ib-about-belief,
+    .ib-about-routine {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .ib-about-values {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .ib-about-routine-product img {
+        height: 68vw;
+    }
+}
+
+/* ========================================================================== 
+   Products page — Phase 3
+   ========================================================================== */
+.ib-products-page,
+.ib-products-page * {
+    box-sizing: border-box;
+}
+
+.ib-products-page {
+    overflow: hidden;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+}
+
+.ib-products-page-main {
+    margin: 0;
+    padding: 0;
+}
+
+.ib-products-page-kicker {
+    margin: 0 0 clamp(14px, 1.2vw, 23px);
+    color: inherit;
+    font-size: clamp(13px, .9vw, 18px);
+    font-weight: 760;
+    letter-spacing: .28em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.ib-products-page-hero {
+    position: relative;
+    min-height: clamp(620px, 48vw, 920px);
+    display: grid;
+    grid-template-columns: minmax(430px, .9fr) minmax(520px, 1.1fr);
+    background: var(--ib-lilac);
+}
+
+.ib-products-page-hero::after {
+    content: '';
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    bottom: -1px;
+    z-index: 4;
+    height: clamp(48px, 4vw, 77px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 44%, 4% 55%, 9% 42%, 14% 56%, 20% 43%, 26% 58%, 32% 43%, 38% 56%, 44% 41%, 51% 57%, 58% 44%, 65% 57%, 72% 43%, 79% 56%, 86% 42%, 93% 55%, 100% 42%, 100% 100%, 0 100%);
+}
+
+.ib-products-page-hero-copy {
+    position: relative;
+    z-index: 5;
+    align-self: center;
+    max-width: 820px;
+    padding: clamp(80px, 8vw, 154px) clamp(54px, 7.5vw, 144px) clamp(110px, 9vw, 172px);
+}
+
+.ib-products-page-hero-copy h1 {
+    margin: 0 0 clamp(28px, 2.5vw, 48px);
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(69px, 6.25vw, 120px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .78;
+}
+
+.ib-products-page-hero-copy > p:not(.ib-products-page-kicker) {
+    max-width: 660px;
+    margin: 0 0 clamp(34px, 3.2vw, 61px);
+    color: var(--ib-coral);
+    font-size: clamp(20px, 1.55vw, 30px);
+    font-weight: 520;
+    line-height: 1.28;
+}
+
+.ib-products-page-hero-visual {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    background: #173c28;
+}
+
+.ib-products-page-leaves {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: 52% center;
+    filter: saturate(1.08) contrast(1.03) brightness(.86);
+}
+
+.ib-products-page-hero-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(110deg, rgba(1, 30, 16, .22), rgba(0, 0, 0, .08) 55%, rgba(0, 0, 0, .32));
+}
+
+.ib-products-page-hero-bottles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.ib-products-page-hero-bottle {
+    position: absolute;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 31px rgba(0, 0, 0, .28));
+}
+
+.ib-products-page-hero-bottle-one {
+    left: 8%;
+    bottom: 3%;
+    z-index: 2;
+    width: clamp(170px, 16vw, 310px);
+    transform: rotate(-8deg);
+}
+
+.ib-products-page-hero-bottle-two {
+    left: 36%;
+    bottom: -3%;
+    z-index: 3;
+    width: clamp(190px, 18vw, 350px);
+    transform: rotate(3deg);
+}
+
+.ib-products-page-hero-bottle-three {
+    right: 3%;
+    bottom: 1%;
+    z-index: 1;
+    width: clamp(165px, 15vw, 295px);
+    transform: rotate(9deg);
+}
+
+.ib-products-routine-intro {
+    display: grid;
+    grid-template-columns: minmax(390px, .86fr) minmax(560px, 1.14fr);
+    gap: clamp(65px, 8vw, 154px);
+    align-items: center;
+    padding: clamp(100px, 8.5vw, 164px) clamp(55px, 8vw, 154px) clamp(110px, 9.5vw, 182px);
+    background: var(--ib-cream);
+}
+
+.ib-products-routine-heading h2 {
+    max-width: 710px;
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(58px, 5vw, 96px);
+    font-weight: 400;
+    letter-spacing: -.025em;
+    line-height: .82;
+}
+
+.ib-products-routine-steps {
+    display: grid;
+    gap: clamp(26px, 2.3vw, 44px);
+}
+
+.ib-products-routine-steps article {
+    min-height: clamp(145px, 10.3vw, 198px);
+    display: grid;
+    grid-template-columns: clamp(80px, 7vw, 134px) minmax(0, 1fr);
+    gap: clamp(24px, 2.3vw, 44px);
+    align-items: center;
+    padding: clamp(28px, 2.4vw, 46px) clamp(30px, 2.6vw, 50px);
+    border: 2px solid rgba(240, 92, 64, .24);
+    border-radius: 999px 30px 30px 999px;
+    background: rgba(255, 250, 245, .72);
+}
+
+.ib-products-routine-steps article:first-child {
+    background: var(--ib-paper);
+}
+
+.ib-products-routine-steps article:last-child {
+    border-color: rgba(0, 105, 130, .22);
+    background: rgba(214, 195, 216, .38);
+}
+
+.ib-products-routine-steps article > span {
+    display: block;
+    color: var(--ib-coral);
+    font-size: clamp(52px, 4.2vw, 81px);
+    font-weight: 780;
+    line-height: .8;
+    text-align: center;
+}
+
+.ib-products-routine-steps article:last-child > span {
+    color: var(--ib-cool);
+}
+
+.ib-products-routine-steps h3 {
+    margin: 0 0 7px;
+    color: var(--ib-coral);
+    font-size: clamp(24px, 1.8vw, 35px);
+    font-weight: 780;
+    line-height: 1;
+}
+
+.ib-products-routine-steps p {
+    margin: 0;
+    color: var(--ib-coral);
+    font-size: clamp(17px, 1.22vw, 23px);
+    font-weight: 520;
+    line-height: 1.25;
+}
+
+.ib-products-family {
+    position: relative;
+    padding: clamp(96px, 7.8vw, 150px) clamp(50px, 7.4vw, 142px) clamp(118px, 9.2vw, 177px);
+}
+
+.ib-products-family-clean {
+    background: var(--ib-paper);
+}
+
+.ib-products-family-smooth {
+    background: var(--ib-lilac);
+}
+
+.ib-products-family-clean::before,
+.ib-products-family-smooth::before {
+    content: '';
+    position: absolute;
+    left: -2%;
+    right: -2%;
+    top: -1px;
+    height: clamp(38px, 3.1vw, 60px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 95% 57%, 89% 42%, 83% 56%, 77% 43%, 70% 59%, 64% 43%, 58% 56%, 51% 41%, 44% 58%, 37% 43%, 30% 56%, 23% 42%, 16% 57%, 8% 42%, 0 55%);
+}
+
+.ib-products-family-smooth::before {
+    background: var(--ib-paper);
+}
+
+.ib-products-family-heading {
+    max-width: 1660px;
+    margin: 0 auto clamp(65px, 5.3vw, 102px);
+    display: grid;
+    grid-template-columns: minmax(420px, 1fr) minmax(420px, .8fr);
+    gap: 70px;
+    align-items: end;
+}
+
+.ib-products-family-heading h2 {
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(64px, 5.8vw, 111px);
+    font-weight: 400;
+    letter-spacing: -.025em;
+    line-height: .78;
+}
+
+.ib-products-family-description {
+    max-width: 650px;
+    justify-self: end;
+    margin: 0 0 3px;
+    color: var(--ib-coral);
+    font-size: clamp(19px, 1.4vw, 27px);
+    font-weight: 520;
+    line-height: 1.28;
+}
+
+.ib-products-detail-grid {
+    max-width: 1660px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(24px, 2.7vw, 52px);
+}
+
+.ib-products-detail-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: clamp(36px, 3.2vw, 62px);
+    padding: clamp(29px, 2.4vw, 46px) clamp(24px, 2.2vw, 42px) clamp(30px, 2.6vw, 50px);
+    box-shadow: 0 24px 60px rgba(68, 34, 25, .08);
+}
+
+.ib-products-detail-cool {
+    color: var(--ib-cool);
+    background: #e5f2f0;
+}
+
+.ib-products-detail-juicy {
+    color: var(--ib-coral);
+    background: #f9d8cb;
+}
+
+.ib-products-detail-yummy {
+    color: #9f78a8;
+    background: #eee1ef;
+}
+
+.ib-products-detail-scent {
+    position: relative;
+    z-index: 3;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.ib-products-detail-scent img {
+    width: clamp(50px, 4.3vw, 82px);
+    height: clamp(50px, 4.3vw, 82px);
+    display: block;
+    object-fit: contain;
+}
+
+.ib-products-detail-scent strong,
+.ib-products-detail-scent span {
+    display: block;
+}
+
+.ib-products-detail-scent strong {
+    margin-bottom: 1px;
+    font-size: clamp(22px, 1.7vw, 33px);
+    font-weight: 790;
+    line-height: 1;
+}
+
+.ib-products-detail-scent span {
+    font-size: clamp(16px, 1.23vw, 24px);
+    font-weight: 520;
+    line-height: 1.05;
+}
+
+.ib-products-detail-bottle-wrap {
+    position: relative;
+    min-height: clamp(400px, 35vw, 670px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: clamp(5px, .9vw, 17px) 0 clamp(24px, 2vw, 39px);
+}
+
+.ib-products-detail-orbit {
+    position: absolute;
+    left: 50%;
+    bottom: 11%;
+    width: 84%;
+    aspect-ratio: 1;
+    border: 2px solid currentColor;
+    border-radius: 43% 57% 48% 52% / 55% 43% 57% 45%;
+    opacity: .16;
+    transform: translateX(-50%) rotate(-10deg);
+}
+
+.ib-products-detail-card:nth-child(2) .ib-products-detail-orbit {
+    transform: translateX(-50%) rotate(13deg);
+}
+
+.ib-products-detail-card:nth-child(3) .ib-products-detail-orbit {
+    transform: translateX(-50%) rotate(-18deg);
+}
+
+.ib-products-detail-bottle {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: clamp(390px, 33vw, 630px);
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 22px 22px rgba(54, 31, 26, .14));
+    transition: transform .35s ease;
+}
+
+.ib-products-detail-card:hover .ib-products-detail-bottle {
+    transform: translateY(-9px) rotate(-1deg);
+}
+
+.ib-products-detail-copy {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.ib-products-detail-copy h3 {
+    margin: 0 0 4px;
+    color: currentColor;
+    font-size: clamp(21px, 1.55vw, 30px);
+    font-weight: 790;
+    line-height: .94;
+}
+
+.ib-products-detail-copy p {
+    margin: 0;
+    color: var(--ib-coral);
+    font-size: clamp(16px, 1.15vw, 22px);
+    font-weight: 580;
+    line-height: 1.1;
+}
+
+.ib-products-detail-copy p span {
+    margin: 0 3px;
+    opacity: .55;
+}
+
+.ib-products-benefits {
+    padding: clamp(105px, 8.2vw, 158px) clamp(54px, 8vw, 154px) clamp(116px, 9vw, 173px);
+    color: var(--ib-white);
+    background: var(--ib-coral);
+}
+
+.ib-products-benefits-heading {
+    max-width: 1660px;
+    margin: 0 auto clamp(55px, 4.5vw, 86px);
+    text-align: center;
+}
+
+.ib-products-benefits-heading h2 {
+    margin: 0;
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(58px, 5vw, 96px);
+    font-weight: 400;
+    letter-spacing: -.025em;
+    line-height: .82;
+}
+
+.ib-products-benefits-grid {
+    max-width: 1540px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+}
+
+.ib-products-benefits-grid article {
+    position: relative;
+    min-height: clamp(310px, 23vw, 442px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(38px, 3.5vw, 67px);
+    border-right: 1px solid rgba(255, 255, 255, .42);
+    text-align: center;
+}
+
+.ib-products-benefits-grid article:last-child {
+    border-right: 0;
+}
+
+.ib-products-benefit-mark,
+.ib-products-benefits-grid article > img {
+    width: clamp(68px, 5.7vw, 110px);
+    height: clamp(68px, 5.7vw, 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp(25px, 2.1vw, 40px);
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(72px, 6vw, 115px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.ib-products-benefits-grid article > img {
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.ib-products-benefits-grid h3 {
+    margin: 0 0 14px;
+    color: var(--ib-white);
+    font-size: clamp(23px, 1.7vw, 33px);
+    font-weight: 780;
+    line-height: 1;
+}
+
+.ib-products-benefits-grid p {
+    max-width: 390px;
+    margin: 0;
+    color: var(--ib-white);
+    font-size: clamp(17px, 1.2vw, 23px);
+    font-weight: 510;
+    line-height: 1.26;
+}
+
+.ib-products-scent-cta {
+    position: relative;
+    min-height: clamp(610px, 48vw, 920px);
+    display: grid;
+    grid-template-columns: minmax(440px, .9fr) minmax(540px, 1.1fr);
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(90px, 7vw, 135px) clamp(58px, 8vw, 154px);
+    color: var(--ib-white);
+    background: #173b27;
+}
+
+.ib-products-scent-cta-bg,
+.ib-products-scent-cta-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ib-products-scent-cta-bg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.ib-products-scent-cta-overlay {
+    background: linear-gradient(90deg, rgba(3, 35, 19, .91), rgba(3, 35, 19, .54) 55%, rgba(0, 17, 6, .46));
+}
+
+.ib-products-scent-cta-copy,
+.ib-products-scent-icons {
+    position: relative;
+    z-index: 2;
+}
+
+.ib-products-scent-cta-copy {
+    max-width: 720px;
+}
+
+.ib-products-scent-cta-copy h2 {
+    margin: 0 0 clamp(25px, 2.2vw, 42px);
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(68px, 6vw, 115px);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    line-height: .78;
+}
+
+.ib-products-scent-cta-copy > p:not(.ib-products-page-kicker) {
+    max-width: 620px;
+    margin: 0 0 clamp(33px, 3vw, 58px);
+    color: var(--ib-white);
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 510;
+    line-height: 1.28;
+}
+
+.ib-products-scent-button {
+    color: var(--ib-coral) !important;
+    background: var(--ib-cream) !important;
+}
+
+.ib-products-scent-icons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 2vw, 38px);
+    align-items: center;
+}
+
+.ib-products-scent-icons > div {
+    min-height: clamp(250px, 20vw, 384px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, .45);
+    border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(2px);
+}
+
+.ib-products-scent-icons > div:nth-child(2) {
+    transform: translateY(-32px) rotate(2deg);
+}
+
+.ib-products-scent-icons > div:nth-child(3) {
+    transform: rotate(-3deg);
+}
+
+.ib-products-scent-icons img {
+    width: clamp(95px, 8vw, 154px);
+    height: clamp(95px, 8vw, 154px);
+    display: block;
+    object-fit: contain;
+    margin-bottom: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.ib-products-scent-icons span {
+    color: var(--ib-white);
+    font-size: clamp(22px, 1.7vw, 33px);
+    font-weight: 780;
+    letter-spacing: .08em;
+    line-height: 1;
+}
+
+.ib-products-retailer-cta {
+    min-height: clamp(260px, 20vw, 384px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 55px;
+    padding: clamp(65px, 5.8vw, 111px) clamp(58px, 8vw, 154px);
+    background: var(--ib-cream);
+}
+
+.ib-products-retailer-cta h2 {
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(56px, 4.8vw, 92px);
+    font-weight: 400;
+    letter-spacing: -.025em;
+    line-height: .82;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+    .ib-products-page-hero {
+        grid-template-columns: .93fr 1.07fr;
+    }
+
+    .ib-products-page-hero-copy {
+        padding-inline: 55px;
+    }
+
+    .ib-products-routine-intro {
+        gap: 45px;
+        padding-inline: 55px;
+    }
+
+    .ib-products-family {
+        padding-inline: 48px;
+    }
+
+    .ib-products-detail-grid {
+        gap: 24px;
+    }
+
+    .ib-products-detail-card {
+        padding-inline: 22px;
+    }
+
+    .ib-products-scent-cta,
+    .ib-products-retailer-cta {
+        padding-inline: 55px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ib-products-page-kicker {
+        margin-bottom: 13px;
+        font-size: 11px;
+        letter-spacing: .24em;
+    }
+
+    .ib-products-page-hero {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ib-products-page-hero-visual {
+        order: 1;
+        min-height: 520px;
+    }
+
+    .ib-products-page-leaves {
+        object-position: center;
+    }
+
+    .ib-products-page-hero-bottle-one {
+        left: -1%;
+        bottom: 3%;
+        width: 40%;
+    }
+
+    .ib-products-page-hero-bottle-two {
+        left: 31%;
+        bottom: -2%;
+        width: 44%;
+    }
+
+    .ib-products-page-hero-bottle-three {
+        right: -4%;
+        bottom: 3%;
+        width: 38%;
+    }
+
+    .ib-products-page-hero-copy {
+        order: 2;
+        max-width: none;
+        padding: 62px 31px 104px;
+        text-align: center;
+    }
+
+    .ib-products-page-hero-copy h1 {
+        margin-bottom: 25px;
+        font-size: clamp(54px, 15vw, 74px);
+        line-height: .8;
+    }
+
+    .ib-products-page-hero-copy > p:not(.ib-products-page-kicker) {
+        margin: 0 auto 34px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .ib-products-page-hero::after {
+        height: 38px;
+    }
+
+    .ib-products-routine-intro {
+        display: block;
+        padding: 72px 25px 84px;
+    }
+
+    .ib-products-routine-heading {
+        margin-bottom: 44px;
+        text-align: center;
+    }
+
+    .ib-products-routine-heading h2 {
+        font-size: clamp(50px, 13.5vw, 67px);
+        line-height: .82;
+    }
+
+    .ib-products-routine-steps {
+        gap: 18px;
+    }
+
+    .ib-products-routine-steps article {
+        min-height: 0;
+        grid-template-columns: 68px minmax(0, 1fr);
+        gap: 16px;
+        padding: 26px 22px 26px 15px;
+        border-radius: 44px 22px 22px 44px;
+    }
+
+    .ib-products-routine-steps article > span {
+        font-size: 48px;
+    }
+
+    .ib-products-routine-steps h3 {
+        font-size: 22px;
+    }
+
+    .ib-products-routine-steps p {
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .ib-products-family {
+        padding: 82px 20px 96px;
+    }
+
+    .ib-products-family::before {
+        height: 32px;
+    }
+
+    .ib-products-family-heading {
+        display: block;
+        margin-bottom: 46px;
+        text-align: center;
+    }
+
+    .ib-products-family-heading h2 {
+        font-size: clamp(57px, 15vw, 74px);
+        line-height: .8;
+    }
+
+    .ib-products-family-description {
+        max-width: 420px;
+        margin: 27px auto 0;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .ib-products-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .ib-products-detail-card {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 34px;
+        padding: 25px 23px 31px;
+    }
+
+    .ib-products-detail-scent {
+        min-height: 54px;
+        gap: 13px;
+    }
+
+    .ib-products-detail-scent img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ib-products-detail-scent strong {
+        font-size: 22px;
+    }
+
+    .ib-products-detail-scent span {
+        font-size: 16px;
+    }
+
+    .ib-products-detail-bottle-wrap {
+        min-height: 395px;
+        margin: 0 0 22px;
+    }
+
+    .ib-products-detail-bottle {
+        height: 390px;
+    }
+
+    .ib-products-detail-copy h3 {
+        font-size: 22px;
+    }
+
+    .ib-products-detail-copy p {
+        font-size: 16px;
+    }
+
+    .ib-products-benefits {
+        padding: 80px 25px 88px;
+    }
+
+    .ib-products-benefits-heading {
+        margin-bottom: 42px;
+    }
+
+    .ib-products-benefits-heading h2 {
+        font-size: clamp(50px, 13.3vw, 66px);
+        line-height: .82;
+    }
+
+    .ib-products-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ib-products-benefits-grid article {
+        min-height: 0;
+        padding: 45px 10px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .42);
+    }
+
+    .ib-products-benefits-grid article:last-child {
+        border-bottom: 0;
+    }
+
+    .ib-products-benefit-mark,
+    .ib-products-benefits-grid article > img {
+        width: 78px;
+        height: 78px;
+        margin-bottom: 23px;
+        font-size: 84px;
+    }
+
+    .ib-products-benefits-grid h3 {
+        font-size: 24px;
+    }
+
+    .ib-products-benefits-grid p {
+        font-size: 17px;
+    }
+
+    .ib-products-scent-cta {
+        min-height: 0;
+        display: block;
+        padding: 83px 24px 91px;
+        text-align: center;
+    }
+
+    .ib-products-scent-cta-overlay {
+        background: rgba(3, 35, 19, .72);
+    }
+
+    .ib-products-scent-cta-copy h2 {
+        font-size: clamp(55px, 15vw, 74px);
+        line-height: .8;
+    }
+
+    .ib-products-scent-cta-copy > p:not(.ib-products-page-kicker) {
+        margin-inline: auto;
+        font-size: 18px;
+    }
+
+    .ib-products-scent-icons {
+        max-width: 420px;
+        margin: 62px auto 0;
+        gap: 10px;
+    }
+
+    .ib-products-scent-icons > div {
+        min-height: 145px;
+        border-width: 1px;
+    }
+
+    .ib-products-scent-icons > div:nth-child(2) {
+        transform: translateY(-16px) rotate(2deg);
+    }
+
+    .ib-products-scent-icons img {
+        width: 66px;
+        height: 66px;
+        margin-bottom: 9px;
+    }
+
+    .ib-products-scent-icons span {
+        font-size: 15px;
+    }
+
+    .ib-products-retailer-cta {
+        min-height: 0;
+        display: block;
+        padding: 72px 27px 80px;
+        text-align: center;
+    }
+
+    .ib-products-retailer-cta h2 {
+        margin-bottom: 35px;
+        font-size: clamp(49px, 13vw, 65px);
+        line-height: .82;
+    }
+}
+
+/* =========================================================
+   Fragrances page
+   ========================================================= */
+.ib-fragrances-page,
+.ib-fragrances-page * {
+    box-sizing: border-box;
+}
+
+.ib-fragrances-page {
+    overflow: hidden;
+    color: var(--ib-coral);
+    background: var(--ib-cream);
+    font-family: 'IslandAfacad', Arial, sans-serif;
+}
+
+.ib-fragrances-main {
+    margin: 0;
+    padding: 0;
+}
+
+.ib-fragrances-kicker {
+    margin: 0 0 clamp(15px, 1.3vw, 25px);
+    color: currentColor;
+    font-size: clamp(13px, .95vw, 18px);
+    font-weight: 800;
+    letter-spacing: .24em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.ib-fragrances-hero {
+    position: relative;
+    min-height: clamp(680px, 50vw, 960px);
+    display: grid;
+    grid-template-columns: minmax(420px, .86fr) minmax(560px, 1.14fr);
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(80px, 7vw, 134px) clamp(58px, 8vw, 154px);
+    color: var(--ib-white);
+    background: #123923;
+}
+
+.ib-fragrances-hero::after {
+    content: '';
+    position: absolute;
+    z-index: 4;
+    right: -2%;
+    bottom: -2px;
+    left: -2%;
+    height: clamp(36px, 3vw, 58px);
+    background: var(--ib-cream);
+    clip-path: polygon(0 58%, 7% 68%, 14% 50%, 23% 69%, 31% 49%, 40% 66%, 49% 48%, 58% 66%, 67% 49%, 76% 69%, 84% 50%, 92% 68%, 100% 54%, 100% 100%, 0 100%);
+}
+
+.ib-fragrances-hero-bg,
+.ib-fragrances-hero-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ib-fragrances-hero-bg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.ib-fragrances-hero-shade {
+    background: linear-gradient(90deg, rgba(3, 31, 17, .94), rgba(3, 31, 17, .72) 48%, rgba(2, 23, 12, .4));
+}
+
+.ib-fragrances-hero-copy,
+.ib-fragrances-hero-orbit {
+    position: relative;
+    z-index: 2;
+}
+
+.ib-fragrances-hero-copy {
+    max-width: 720px;
+}
+
+.ib-fragrances-hero-copy h1 {
+    margin: 0 0 clamp(25px, 2.4vw, 46px);
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(76px, 6.8vw, 130px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .78;
+}
+
+.ib-fragrances-hero-copy > p:not(.ib-fragrances-kicker) {
+    max-width: 660px;
+    margin: 0 0 clamp(34px, 3vw, 58px);
+    color: var(--ib-white);
+    font-size: clamp(20px, 1.5vw, 29px);
+    font-weight: 500;
+    line-height: 1.28;
+}
+
+.ib-fragrances-hero-button {
+    color: var(--ib-coral) !important;
+    background: var(--ib-cream) !important;
+}
+
+.ib-fragrances-hero-orbit {
+    min-height: clamp(490px, 39vw, 750px);
+}
+
+.ib-fragrances-hero-orbit::before,
+.ib-fragrances-hero-orbit::after {
+    content: '';
+    position: absolute;
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+}
+
+.ib-fragrances-hero-orbit::before {
+    inset: 7% 2% 2% 10%;
+    transform: rotate(-8deg);
+}
+
+.ib-fragrances-hero-orbit::after {
+    inset: 17% 11% 9% 2%;
+    transform: rotate(12deg);
+}
+
+.ib-fragrances-hero-mood {
+    position: absolute;
+    z-index: 2;
+    width: clamp(190px, 15.5vw, 298px);
+    height: clamp(190px, 15.5vw, 298px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, .55);
+    background: rgba(255, 255, 255, .11);
+    backdrop-filter: blur(3px);
+}
+
+.ib-fragrances-hero-mood img {
+    width: 49%;
+    height: 49%;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 14px;
+    filter: brightness(0) invert(1);
+}
+
+.ib-fragrances-hero-mood span {
+    color: var(--ib-white);
+    font-size: clamp(20px, 1.55vw, 30px);
+    font-weight: 800;
+    letter-spacing: .1em;
+    line-height: 1;
+}
+
+.ib-fragrances-hero-cool {
+    top: 2%;
+    left: 36%;
+    border-radius: 54% 46% 57% 43% / 44% 53% 47% 56%;
+    transform: rotate(4deg);
+}
+
+.ib-fragrances-hero-juicy {
+    bottom: 2%;
+    left: 6%;
+    border-radius: 45% 55% 42% 58% / 53% 44% 56% 47%;
+    transform: rotate(-7deg);
+}
+
+.ib-fragrances-hero-yummy {
+    right: 0;
+    bottom: 10%;
+    border-radius: 58% 42% 51% 49% / 44% 56% 44% 56%;
+    transform: rotate(8deg);
+}
+
+.ib-fragrances-intro {
+    display: grid;
+    grid-template-columns: minmax(430px, .9fr) minmax(520px, 1.1fr);
+    gap: clamp(60px, 7vw, 135px);
+    align-items: center;
+    padding: clamp(100px, 8vw, 154px) clamp(58px, 8vw, 154px) clamp(115px, 9vw, 173px);
+    background: var(--ib-cream);
+}
+
+.ib-fragrances-intro-heading h2 {
+    margin: 0;
+    color: var(--ib-coral);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(70px, 6vw, 115px);
+    font-weight: 400;
+    letter-spacing: -.03em;
+    line-height: .8;
+}
+
+.ib-fragrances-intro-copy > p {
+    max-width: 760px;
+    margin: 0 0 clamp(36px, 3vw, 58px);
+    color: var(--ib-coral);
+    font-size: clamp(21px, 1.55vw, 30px);
+    font-weight: 500;
+    line-height: 1.32;
+}
+
+.ib-fragrances-mood-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.ib-fragrances-mood-links a {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px 17px;
+    border: 1px solid rgba(240, 92, 64, .32);
+    border-radius: 999px;
+    color: var(--ib-coral);
+    background: rgba(255, 255, 255, .34);
+    font-size: clamp(15px, 1.05vw, 20px);
+    font-weight: 700;
+    line-height: 1.08;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.ib-fragrances-mood-links a:hover {
+    color: var(--ib-coral);
+    background: var(--ib-white);
+    transform: translateY(-3px);
+}
+
+.ib-fragrances-dot {
+    flex: 0 0 auto;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+}
+
+.ib-fragrances-dot-cool { background: var(--ib-cool); }
+.ib-fragrances-dot-juicy { background: var(--ib-coral); }
+.ib-fragrances-dot-yummy { background: var(--ib-yummy); }
+
+.ib-fragrance-worlds {
+    background: var(--ib-cream);
+}
+
+.ib-fragrance-world {
+    position: relative;
+    min-height: clamp(700px, 55vw, 1055px);
+    display: grid;
+    grid-template-columns: minmax(450px, .88fr) minmax(570px, 1.12fr);
+    align-items: stretch;
+    overflow: hidden;
+    scroll-margin-top: 150px;
+}
+
+.ib-fragrance-world:nth-child(even) .ib-fragrance-world-copy {
+    order: 2;
+}
+
+.ib-fragrance-world:nth-child(even) .ib-fragrance-world-visual {
+    order: 1;
+}
+
+.ib-fragrance-world-copy {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(80px, 7vw, 135px) clamp(58px, 7vw, 135px);
+}
+
+.ib-fragrance-world-number {
+    position: absolute;
+    top: clamp(34px, 3.2vw, 62px);
+    right: clamp(40px, 4vw, 77px);
+    color: currentColor;
+    font-size: clamp(54px, 5.2vw, 100px);
+    font-weight: 300;
+    letter-spacing: -.04em;
+    line-height: .8;
+    opacity: .2;
+}
+
+.ib-fragrance-world-icon {
+    width: clamp(100px, 9vw, 173px);
+    height: clamp(100px, 9vw, 173px);
+    margin-bottom: clamp(27px, 2.2vw, 42px);
+}
+
+.ib-fragrance-world-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ib-fragrance-world-copy h2 {
+    margin: 0 0 clamp(26px, 2.5vw, 48px);
+    color: currentColor;
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(78px, 7vw, 134px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .76;
+}
+
+.ib-fragrance-world-lead {
+    max-width: 680px;
+    margin: 0 0 clamp(30px, 2.7vw, 52px);
+    color: currentColor;
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 500;
+    line-height: 1.32;
+}
+
+.ib-fragrance-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: clamp(35px, 3vw, 58px);
+}
+
+.ib-fragrance-notes span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 9px 20px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: currentColor;
+    font-size: clamp(13px, .95vw, 18px);
+    font-weight: 800;
+    letter-spacing: .12em;
+    line-height: 1;
+}
+
+.ib-fragrance-text-link {
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: currentColor;
+    font-size: clamp(17px, 1.25vw, 24px);
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.ib-fragrance-text-link:hover {
+    color: currentColor;
+    opacity: .74;
+}
+
+.ib-fragrance-world-visual {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.ib-fragrance-world-visual::before,
+.ib-fragrance-world-visual::after {
+    content: '';
+    position: absolute;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    opacity: .3;
+}
+
+.ib-fragrance-world-visual::before {
+    inset: 9% 5% 7% 9%;
+    transform: rotate(-9deg);
+}
+
+.ib-fragrance-world-visual::after {
+    inset: 18% 12% 15% 2%;
+    transform: rotate(11deg);
+}
+
+.ib-fragrance-world-shape {
+    position: absolute;
+    inset: 13% 12%;
+    border-radius: 50% 50% 45% 55% / 54% 46% 54% 46%;
+    background: rgba(255, 255, 255, .26);
+    transform: rotate(-7deg);
+}
+
+.ib-fragrance-world-bottle {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 30px 34px rgba(0, 0, 0, .18));
+}
+
+.ib-fragrance-world-bottle-shower {
+    left: 16%;
+    bottom: 7%;
+    width: clamp(240px, 21vw, 403px);
+    transform: rotate(-8deg);
+}
+
+.ib-fragrance-world-bottle-lotion {
+    right: 10%;
+    bottom: 2%;
+    width: clamp(255px, 22vw, 422px);
+    transform: rotate(7deg);
+}
+
+.ib-fragrance-world-cool {
+    color: var(--ib-cool);
+    background: #d7eef0;
+}
+
+.ib-fragrance-world-cool .ib-fragrance-world-copy {
+    background: #ecf7f7;
+}
+
+.ib-fragrance-world-cool .ib-fragrance-world-visual {
+    background: #b8e0e2;
+}
+
+.ib-fragrance-world-juicy {
+    color: var(--ib-coral);
+    background: #ffd8ca;
+}
+
+.ib-fragrance-world-juicy .ib-fragrance-world-copy {
+    background: #fff0e9;
+}
+
+.ib-fragrance-world-juicy .ib-fragrance-world-visual {
+    background: #f8aa93;
+}
+
+.ib-fragrance-world-yummy {
+    color: #8b6098;
+    background: #eadcf0;
+}
+
+.ib-fragrance-world-yummy .ib-fragrance-world-copy {
+    background: #f7eff9;
+}
+
+.ib-fragrance-world-yummy .ib-fragrance-world-visual {
+    background: var(--ib-yummy);
+}
+
+.ib-fragrances-layer {
+    min-height: clamp(670px, 50vw, 960px);
+    display: grid;
+    grid-template-columns: minmax(450px, .9fr) minmax(560px, 1.1fr);
+    align-items: center;
+    gap: clamp(55px, 5vw, 96px);
+    overflow: hidden;
+    padding: clamp(90px, 7vw, 135px) clamp(58px, 8vw, 154px);
+    color: var(--ib-white);
+    background: var(--ib-coral);
+}
+
+.ib-fragrances-layer-copy h2 {
+    margin: 0 0 clamp(28px, 2.5vw, 48px);
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(76px, 6.5vw, 124px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .76;
+}
+
+.ib-fragrances-layer-copy > p:not(.ib-fragrances-kicker) {
+    max-width: 660px;
+    margin: 0 0 clamp(38px, 3.2vw, 61px);
+    color: var(--ib-white);
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 500;
+    line-height: 1.32;
+}
+
+.ib-fragrances-layer-copy .ib-pill-button {
+    color: var(--ib-coral) !important;
+    background: var(--ib-cream) !important;
+}
+
+.ib-fragrances-layer-visual {
+    position: relative;
+    min-height: clamp(490px, 39vw, 750px);
+}
+
+.ib-fragrances-layer-line {
+    position: absolute;
+    top: 12%;
+    right: 2%;
+    bottom: 9%;
+    left: 2%;
+    border: 2px solid rgba(255, 255, 255, .55);
+    border-radius: 49% 51% 43% 57% / 51% 44% 56% 49%;
+    transform: rotate(-7deg);
+}
+
+.ib-fragrances-layer-line::after {
+    content: '';
+    position: absolute;
+    inset: 8% -4% -5% 7%;
+    border: 2px solid rgba(255, 255, 255, .24);
+    border-radius: 55% 45% 53% 47% / 45% 57% 43% 55%;
+    transform: rotate(13deg);
+}
+
+.ib-fragrances-layer-bottle {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 34px rgba(84, 25, 13, .26));
+}
+
+.ib-fragrances-layer-one {
+    left: 3%;
+    bottom: 4%;
+    width: clamp(210px, 18vw, 346px);
+    transform: rotate(-9deg);
+}
+
+.ib-fragrances-layer-two {
+    left: 35%;
+    bottom: 1%;
+    width: clamp(235px, 20vw, 384px);
+    transform: rotate(2deg);
+}
+
+.ib-fragrances-layer-three {
+    right: 1%;
+    bottom: 5%;
+    width: clamp(205px, 17vw, 326px);
+    transform: rotate(9deg);
+}
+
+.ib-fragrances-cta {
+    position: relative;
+    min-height: clamp(470px, 37vw, 710px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: clamp(80px, 7vw, 135px) 30px;
+    color: var(--ib-white);
+    text-align: center;
+    background: #143a24;
+}
+
+.ib-fragrances-cta-bg,
+.ib-fragrances-cta-shade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ib-fragrances-cta-bg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.ib-fragrances-cta-shade {
+    background: rgba(5, 35, 18, .68);
+}
+
+.ib-fragrances-cta-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+}
+
+.ib-fragrances-cta-copy h2 {
+    margin: 0 0 clamp(25px, 2.3vw, 44px);
+    color: var(--ib-white);
+    font-family: 'IslandVampiro', cursive;
+    font-size: clamp(74px, 6.8vw, 130px);
+    font-weight: 400;
+    letter-spacing: -.035em;
+    line-height: .78;
+}
+
+.ib-fragrances-cta-copy > p:not(.ib-fragrances-kicker) {
+    max-width: 720px;
+    margin: 0 auto clamp(34px, 3vw, 58px);
+    color: var(--ib-white);
+    font-size: clamp(20px, 1.45vw, 28px);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.ib-fragrances-cta-button {
+    color: var(--ib-coral) !important;
+    background: var(--ib-cream) !important;
+}
+
+@media (max-width: 1100px) and (min-width: 768px) {
+    .ib-fragrances-hero,
+    .ib-fragrances-intro,
+    .ib-fragrances-layer {
+        padding-inline: 52px;
+    }
+
+    .ib-fragrances-hero {
+        grid-template-columns: .94fr 1.06fr;
+    }
+
+    .ib-fragrances-hero-mood {
+        width: 200px;
+        height: 200px;
+    }
+
+    .ib-fragrance-world-copy {
+        padding-inline: 50px;
+    }
+
+    .ib-fragrance-world-bottle-shower {
+        left: 8%;
+    }
+
+    .ib-fragrance-world-bottle-lotion {
+        right: 2%;
+    }
+}
+
+@media (max-width: 767px) {
+    .ib-fragrances-kicker {
+        margin-bottom: 13px;
+        font-size: 11px;
+        letter-spacing: .22em;
+    }
+
+    .ib-fragrances-hero {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .ib-fragrances-hero-shade {
+        background: rgba(3, 31, 17, .6);
+    }
+
+    .ib-fragrances-hero-orbit {
+        order: 1;
+        width: 100%;
+        min-height: 510px;
+        margin-top: 0;
+    }
+
+    .ib-fragrances-hero-orbit::before {
+        inset: 9% 3% 8% 7%;
+    }
+
+    .ib-fragrances-hero-orbit::after {
+        inset: 17% 10% 15% 1%;
+    }
+
+    .ib-fragrances-hero-mood {
+        width: 145px;
+        height: 145px;
+    }
+
+    .ib-fragrances-hero-cool {
+        top: 6%;
+        left: 34%;
+    }
+
+    .ib-fragrances-hero-juicy {
+        bottom: 8%;
+        left: 4%;
+    }
+
+    .ib-fragrances-hero-yummy {
+        right: 3%;
+        bottom: 12%;
+    }
+
+    .ib-fragrances-hero-mood span {
+        font-size: 16px;
+    }
+
+    .ib-fragrances-hero-copy {
+        order: 2;
+        max-width: none;
+        padding: 58px 28px 103px;
+        text-align: center;
+    }
+
+    .ib-fragrances-hero-copy h1 {
+        margin-bottom: 24px;
+        font-size: clamp(58px, 16vw, 76px);
+        line-height: .8;
+    }
+
+    .ib-fragrances-hero-copy > p:not(.ib-fragrances-kicker) {
+        margin: 0 auto 34px;
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+    .ib-fragrances-hero::after {
+        height: 34px;
+    }
+
+    .ib-fragrances-intro {
+        display: block;
+        padding: 74px 27px 84px;
+        text-align: center;
+    }
+
+    .ib-fragrances-intro-heading h2 {
+        font-size: clamp(54px, 14.5vw, 70px);
+        line-height: .82;
+    }
+
+    .ib-fragrances-intro-copy {
+        margin-top: 35px;
+    }
+
+    .ib-fragrances-intro-copy > p {
+        font-size: 18px;
+        line-height: 1.32;
+    }
+
+    .ib-fragrances-mood-links {
+        max-width: 430px;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    .ib-fragrances-mood-links a {
+        min-height: 60px;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    .ib-fragrance-world {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ib-fragrance-world:nth-child(even) .ib-fragrance-world-copy,
+    .ib-fragrance-world-copy {
+        order: 2;
+        padding: 65px 28px 80px;
+        text-align: center;
+    }
+
+    .ib-fragrance-world:nth-child(even) .ib-fragrance-world-visual,
+    .ib-fragrance-world-visual {
+        order: 1;
+        min-height: 510px;
+    }
+
+    .ib-fragrance-world-number {
+        top: 25px;
+        right: 25px;
+        font-size: 62px;
+    }
+
+    .ib-fragrance-world-icon {
+        width: 93px;
+        height: 93px;
+        margin: 0 auto 25px;
+    }
+
+    .ib-fragrance-world-copy h2 {
+        font-size: clamp(62px, 17vw, 82px);
+        line-height: .77;
+    }
+
+    .ib-fragrance-world-lead {
+        margin-inline: auto;
+        font-size: 18px;
+    }
+
+    .ib-fragrance-notes {
+        justify-content: center;
+        margin-bottom: 37px;
+    }
+
+    .ib-fragrance-notes span {
+        min-height: 39px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .ib-fragrance-text-link {
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    .ib-fragrance-world-shape {
+        inset: 13% 10%;
+    }
+
+    .ib-fragrance-world-bottle-shower {
+        left: 8%;
+        bottom: 4%;
+        width: 53%;
+    }
+
+    .ib-fragrance-world-bottle-lotion {
+        right: 4%;
+        bottom: 0;
+        width: 57%;
+    }
+
+    .ib-fragrances-layer {
+        min-height: 0;
+        display: block;
+        padding: 73px 27px 82px;
+        text-align: center;
+    }
+
+    .ib-fragrances-layer-copy h2 {
+        font-size: clamp(60px, 16vw, 78px);
+        line-height: .77;
+    }
+
+    .ib-fragrances-layer-copy > p:not(.ib-fragrances-kicker) {
+        margin-inline: auto;
+        font-size: 18px;
+    }
+
+    .ib-fragrances-layer-visual {
+        min-height: 430px;
+        margin-top: 50px;
+    }
+
+    .ib-fragrances-layer-one {
+        left: -5%;
+        width: 42%;
+    }
+
+    .ib-fragrances-layer-two {
+        left: 29%;
+        width: 47%;
+    }
+
+    .ib-fragrances-layer-three {
+        right: -4%;
+        width: 40%;
+    }
+
+    .ib-fragrances-cta {
+        min-height: 520px;
+        padding: 80px 27px;
+    }
+
+    .ib-fragrances-cta-copy h2 {
+        font-size: clamp(60px, 16vw, 78px);
+        line-height: .8;
+    }
+
+    .ib-fragrances-cta-copy > p:not(.ib-fragrances-kicker) {
+        font-size: 18px;
+    }
+}
+
+
+/* v1.3.1 footer social icon guard
+   Odoo's website editor can apply generic SVG sizing after an inline footer edit.
+   Keep every footer social icon at the intended brand size on desktop and mobile. */
+.ib-site-footer .ib-footer-socials {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+}
+
+.ib-site-footer .ib-footer-socials > a {
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    flex: 0 0 35px !important;
+    overflow: visible !important;
+    line-height: 1 !important;
+}
+
+.ib-site-footer .ib-footer-socials > a > svg,
+.ib-site-footer .ib-footer-socials > a svg {
+    display: block !important;
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    flex: 0 0 35px !important;
+    transform: none !important;
+}
+
+.ib-site-footer .ib-footer-socials > a.ib-footer-threads {
+    font-size: 38px !important;
+    width: 35px !important;
+    height: 35px !important;
+    min-width: 35px !important;
+    max-width: 35px !important;
+    flex-basis: 35px !important;
+}
+
+@media (max-width: 767px) {
+    .ib-site-footer .ib-footer-socials > a,
+    .ib-site-footer .ib-footer-socials > a > svg,
+    .ib-site-footer .ib-footer-socials > a svg {
+        width: 31px !important;
+        height: 31px !important;
+        min-width: 31px !important;
+        min-height: 31px !important;
+        max-width: 31px !important;
+        max-height: 31px !important;
+        flex: 0 0 31px !important;
+    }
+
+    .ib-site-footer .ib-footer-socials > a.ib-footer-threads {
+        width: 31px !important;
+        height: 31px !important;
+        min-width: 31px !important;
+        max-width: 31px !important;
+        flex-basis: 31px !important;
+        font-size: 34px !important;
+    }
+}
+
+/* v1.3.2 footer social icons
+   External image assets and fixed boxes prevent Odoo editor SVG rules from enlarging them. */
+.ib-site-footer .ib-footer-socials {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 24px !important;
+}
+
+.ib-site-footer .ib-footer-socials > a {
+    inline-size: 30px !important;
+    block-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    flex: 0 0 30px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    line-height: 1 !important;
+}
+
+.ib-site-footer .ib-footer-socials .ib-footer-social-image,
+.ib-site-footer .ib-footer-socials > a > img,
+.ib-site-footer .ib-footer-socials > a > svg {
+    inline-size: 30px !important;
+    block-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    display: block !important;
+    object-fit: contain !important;
+    flex: 0 0 30px !important;
+    transform: none !important;
+}
+
+.ib-site-footer .ib-footer-socials > a.ib-footer-threads {
+    inline-size: 30px !important;
+    block-size: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    flex: 0 0 30px !important;
+    overflow: visible !important;
+    font-size: 31px !important;
+    font-weight: 800 !important;
+    line-height: 27px !important;
+}
+
+@media (max-width: 767px) {
+    .ib-site-footer .ib-footer-socials {
+        gap: 20px !important;
+    }
+
+    .ib-site-footer .ib-footer-socials > a,
+    .ib-site-footer .ib-footer-socials .ib-footer-social-image,
+    .ib-site-footer .ib-footer-socials > a > img,
+    .ib-site-footer .ib-footer-socials > a > svg,
+    .ib-site-footer .ib-footer-socials > a.ib-footer-threads {
+        inline-size: 28px !important;
+        block-size: 28px !important;
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+        flex: 0 0 28px !important;
+    }
+
+    .ib-site-footer .ib-footer-socials > a.ib-footer-threads {
+        font-size: 29px !important;
+        line-height: 25px !important;
+    }
+}
